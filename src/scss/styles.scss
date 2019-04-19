@@ -7,7 +7,8 @@
 .nav{
   display: flex;
   justify-content: space-around;
-  background-color: #CFFFAB;
+  background-color: #93E853;
+  border-bottom: 2px solid lightgray;
   padding: 1%;
   .navLogo{
     height: 70%;
@@ -53,12 +54,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 25%;
+  height: 500px;
   width: 30%;
   border: solid lightgray 1px;
   border-radius: 5px;
   margin-top: 2%;
   padding: 1%;
+  .sideBarPicture{
+    width: 70%;
+  }
 }
 
 #profilePicture{
@@ -131,6 +135,7 @@
   border: solid lightgray 1px;
   border-radius: 5px;
   width: 100%;
+  padding: 1%;
 }
 
 .postStatistics{
@@ -162,7 +167,8 @@
 .footer{
   height: 200px;
   width: 100vw;
-  background-color: #CFFFAB;
+  background-color: #93E853;
+  border-top: 2px solid lightgray;
   margin-top: 5%;
 }
 //Footer Styling

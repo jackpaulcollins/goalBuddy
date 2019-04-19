@@ -6,8 +6,9 @@ import UserStats from './UserStats';
 function SideBar(){
   return(
     <div className="sideBar">
-      <ProfilePicture/>
-      <Requests/>
+      <div className="sideBarPicture">
+        <ProfilePicture/>
+      </div>
       <UserStats/>
     </div>
   )

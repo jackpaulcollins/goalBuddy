@@ -19,3 +19,18 @@
   width: 25%;
   justify-content: space-between;
 }
+
+.bodyMain{
+  width: 100vw;
+  height: 100vh;
+  border: solid green 1px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
+
+
+.sideBar{
+  height: 200px;
+  width: 200px;
+  border: solid pink 1px;
+}

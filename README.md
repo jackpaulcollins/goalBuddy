@@ -30,7 +30,7 @@ _unforseen issues included passing images as props_
 
 
 ## Diagram
-![Planning Diagram](src/assets/picture.png)
+![Planning Diagram](https://imgur.com/a/udArzyu)
 
 ## Known Bugs
 

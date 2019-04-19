@@ -1,3 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .nav{
-  color: red;
+  display: flex;
+  justify-content: space-around;
+  border: solid red 1px;
+}
+
+.navLeft{
+  width: 75%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navRight{
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
 }

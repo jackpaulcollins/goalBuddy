@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../scss/styles.scss';
 import ProfilePicture from './ProfilePicture';
+import g from '../assets/images/g.svg'
 
 function NavBar(){
 
@@ -8,10 +9,10 @@ function NavBar(){
     <div>
       <nav className="nav">
         <div className="navLeft">
-          <h1>GoalBuddy</h1>
+          <img className=
+            "navLogo" src={g}/>
         </div>
         <div className="navRight">
-          <h1>Icon</h1>
             <input type='text'
                     className='navBarSearch'
                     placeholder='Search'/>

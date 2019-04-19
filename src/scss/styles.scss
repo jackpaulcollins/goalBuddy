@@ -9,6 +9,9 @@
   justify-content: space-around;
   background-color: #CFFFAB;
   padding: 1%;
+  .navLogo{
+    height: 70%;
+  }
 }
 
 .navLeft{
@@ -26,6 +29,8 @@
     .NavProfilePicture{
       width: 100px;
     }
+
+
 }
 
 //end NavBar styling

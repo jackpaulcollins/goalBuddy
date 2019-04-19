@@ -2,6 +2,7 @@ import React from 'react';
 import Requests from './Requests';
 import ProfilePicture from './ProfilePicture';
 import UserStats from './UserStats';
+import AboutUser from './AboutUser';
 
 function SideBar(){
   return(
@@ -9,6 +10,7 @@ function SideBar(){
       <div className="sideBarPicture">
         <ProfilePicture/>
       </div>
+      <AboutUser/>
       <UserStats/>
     </div>
   )

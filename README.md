@@ -10,7 +10,9 @@ A primary feature of the site will be the ability for a user to create a "pendin
 
 Another primary feature is the social aspect of GoalBuddy. Like MyFitnessPal, users will be able to share their progress towards their goal, and like, comment, etc. on posts highlighting progress.
 
-A secondary feature of Goalbuddy is gamifying established relationships in order to incentivize users to take full advantage of the platform. How this will be executed is not entirely clear at this point, however it will involve some form of reward for when users successfully complete the goals they set._
+A secondary feature of Goalbuddy is gamifying established relationships in order to incentivize users to take full advantage of the platform. How this will be executed is not entirely clear at this point, however it will involve some form of reward for when users successfully complete the goals they set.
+
+Developing this project in React seemed easier and more straightforward than in Angular, however that may be due to my familiarity with component driven development via Angular _
 
 ## Setup/Installation Requirements
 
@@ -21,6 +23,11 @@ A secondary feature of Goalbuddy is gamifying established relationships in order
 * _Create a repository for yourself on github or what application you may use_
 * _Copy url link thats given and run `git remote add -Your initials- -Link-` inside your terminal_
 * _Push your project when ready with `git push -Your initials- -Branch name (master is default)-`_
+
+## Notes
+
+_unforseen issues included passing images as props_
+
 
 ## Diagram
 ![Planning Diagram](src/assets/picture.png)

@@ -4,7 +4,7 @@
 
 ## Description
 
-_The idea behind Goalbuddy is to create a social network for people to connect with other users that share similar goals. The primary feature is shared goal setting, and the ability for user's to establish a relationship of accountability.
+The idea behind Goalbuddy is to create a social network for people to connect with other users that share similar goals. The primary feature is shared goal setting, and the ability for user's to establish a relationship of accountability.
 
 A primary feature of the site will be the ability for a user to create a "pending buddy request", and to view said requests made by other users. If a user finds a goal they would like to actively participate in they can "connect" with the user that original created the request. Once users are connected they will have the ability to negotiate the parameters of the relationship.
 
@@ -12,7 +12,7 @@ Another primary feature is the social aspect of GoalBuddy. Like MyFitnessPal, us
 
 A secondary feature of Goalbuddy is gamifying established relationships in order to incentivize users to take full advantage of the platform. How this will be executed is not entirely clear at this point, however it will involve some form of reward for when users successfully complete the goals they set.
 
-Developing this project in React seemed easier and more straightforward than in Angular, however that may be due to my familiarity with component driven development via Angular _
+Developing this project in React seemed easier and more straightforward than in Angular, however that may be due to my familiarity with component driven development via Angular
 
 ## Setup/Installation Requirements
 

@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
+import NavBar from './Navbar';
 
 function App(){
   return (
-  <div>
-    <h1>Hello</h1>
-    <h2>jsjq</h2>
-  </div>
+    <div>
+      <NavBar/>
+    </div>
   );
 }
 

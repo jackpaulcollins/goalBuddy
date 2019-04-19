@@ -10,7 +10,10 @@ function Post(){
   return(
     <div className="post">
       <div>
-        <PostTopRow/>
+        <PostTopRow
+            image="blazers"
+            username="Portland TrailBlazers"
+            time="15 minutes ago"/>
       </div>
       <div className="postBody">
         <PostBody/>

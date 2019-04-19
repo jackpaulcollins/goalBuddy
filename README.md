@@ -36,7 +36,7 @@ _unforseen issues included passing images as props_
 
 _currently unable to render an image via a prop_
 
-_No Known bugs_
+_No other Known bugs_
 
 ## Support and contact details
 
@@ -45,8 +45,11 @@ _Feel free to contact Jack at jackpaulcollins@gmail.com_
 ## Technologies Used
 
 _scss_
+
 _Webpack_
+
 _React_
+
 _eslint_
 
 ### License

@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
+//NavBar styling
 .nav{
   display: flex;
   justify-content: space-around;
   border: solid red 1px;
+  margin-top: 15px;
 }
 
 .navLeft{
@@ -16,9 +19,17 @@
 
 .navRight{
   display: flex;
-  width: 25%;
+  width: 45%;
   justify-content: space-between;
+  align-items: center;
+    .NavProfilePicture{
+      width: 100px;
+    }
 }
+
+//end NavBar styling
+
+//Body styling
 
 .bodyMain{
   width: 100vw;
@@ -28,9 +39,21 @@
   text-align: center;
 }
 
+//end Body styling
+
+//SideBar styling
 
 .sideBar{
   height: 200px;
   width: 200px;
   border: solid pink 1px;
 }
+
+#profilePicture{
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+}
+
+
+//end SideBar styling

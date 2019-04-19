@@ -76,4 +76,18 @@
   border: solid black 1px;
 }
 
+.liveFeed{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  .post{
+    border: solid orange 1px;
+    width: 100%;
+  }
+}
+
+//End Feed Styling
+
 //end Body styling

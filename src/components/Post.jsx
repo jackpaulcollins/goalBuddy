@@ -20,7 +20,10 @@ function Post(){
           content="Blazers win!"/>
       </div>
       <div className="postStatistics">
-        <PostStatistics/>
+        <PostStatistics
+          likes="1.5"
+          comments="150"
+          shares="12"/>
       </div>
       <div className="postFooter">
         <PostFooter/>

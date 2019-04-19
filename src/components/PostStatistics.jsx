@@ -1,17 +1,24 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-function PostStatistics(){
+function PostStatistics(props){
   return(
     <div className="postStatistics">
       <div className="postStatisticsLeft">
-        <p>1.5k Likes</p>
+        <p>{props.likes} likes</p>
       </div>
       <div className="postStatisticsRight">
-        <p>13 Comments</p>
-        <p>28 Shares</p>
+        <p>{props.comments} comments</p>
+        <p>{props.shares} shares</p>
       </div>
     </div>
   )
 };
+
+PostStatistics.PropTypes = {
+  likes: PropTypes.number,
+  comments: PropTypes.number,
+  shares: PropTypes.number
+}
 
 export default PostStatistics;

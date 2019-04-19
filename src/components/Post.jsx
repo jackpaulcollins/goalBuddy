@@ -6,6 +6,8 @@ import PostStatistics from './PostStatistics';
 import PostFooter from './PostFooter';
 import styles from '../scss/styles.scss';
 
+
+
 function Post(){
   return(
     <div className="post">

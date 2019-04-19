@@ -27,6 +27,8 @@ A secondary feature of Goalbuddy is gamifying established relationships in order
 
 ## Known Bugs
 
+_currently unable to render an image via a prop_
+
 _No Known bugs_
 
 ## Support and contact details

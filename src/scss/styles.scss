@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
 *{
+  font-family: 'PT Sans', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -38,7 +41,12 @@
 
 //Body styling
 
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
 .bodyMain{
+
   display: flex;
   align-content: space-around;
   width: 100vw;

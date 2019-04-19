@@ -4,10 +4,14 @@ import blazers from '../assets/images/blazers.svg';
 import menu from '../assets/images/menu.png';
 import PropTypes from "prop-types";
 
+//rendering image via prop not working
+
 function PostTopRow(props){
+
+
   return(
     <div className="postTopRow">
-      <img className="postTopRowPicture" src={props.image}/>
+      <img className="postTopRowPicture" src={blazers}/>
       <div>
         <h4>{props.username}</h4>
         <p>{props.time}</p>

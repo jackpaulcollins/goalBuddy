@@ -16,7 +16,8 @@ function Post(){
             time="15 minutes ago"/>
       </div>
       <div className="postBody">
-        <PostBody/>
+        <PostBody
+          content="Blazers win!"/>
       </div>
       <div className="postStatistics">
         <PostStatistics/>

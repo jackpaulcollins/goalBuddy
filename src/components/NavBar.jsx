@@ -12,7 +12,9 @@ function NavBar(){
         </div>
         <div className="navRight">
           <h1>Icon</h1>
-          <h1>Search Bar</h1>
+            <input type='text'
+                    className='navBarSearch'
+                    placeholder='Search'/>
           <div className="NavProfilePicture">
             <ProfilePicture/>
           </div>

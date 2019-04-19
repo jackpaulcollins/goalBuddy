@@ -6,6 +6,7 @@ function NewPost(){
   return(
     <div className='newPost'>
       <input type='text'
+              className='newPostInput'
               placeholder='Whats on your mind?'/>
             <SubmitPost/>
     </div>

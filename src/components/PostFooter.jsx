@@ -7,7 +7,7 @@ function PostFooter(){
       <span>COMMENT</span>
       <span>SHARE</span>
     </div>
-  )
-};
+  );
+}
 
 export default PostFooter;

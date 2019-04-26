@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 function Likes(props){
-  
-  console.log(props)
+
   
   function handleNewLike(){
     props.onNewLike();

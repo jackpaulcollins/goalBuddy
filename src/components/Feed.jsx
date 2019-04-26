@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import NewPost from './NewPost';
 import LiveFeed from './LiveFeed';
 import styles from '../scss/styles.scss';
@@ -10,7 +10,7 @@ class Feed extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      userPosts: []
+      userPosts: [],
     };
     this.handleCreatingNewPost = this.handleCreatingNewPost.bind(this);
     this.handleNewLike = this.handleNewLike.bind(this);
@@ -26,7 +26,7 @@ class Feed extends React.Component{
   
   handleNewLike(post){
     this.setState((state) => {
-    return {likes: state.userPosts.likes + 1 };
+    return {likes: state.userPosts.likes += 1 };
   });
   }
   

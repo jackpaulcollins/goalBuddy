@@ -9,8 +9,6 @@ function NewPost(props){
 
   let _content = null;
 
-
-
   function handleNewPost(event) {
     event.preventDefault();
     console.log(_content.value)

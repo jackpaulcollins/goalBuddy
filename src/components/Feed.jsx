@@ -26,7 +26,7 @@ class Feed extends React.Component{
   
   handleNewLike(post){
     this.setState((state) => {
-    return {likes: state.userPosts.likes += 1 };
+    return {likes: (state.userPosts.likes + 1) };
   });
   }
   

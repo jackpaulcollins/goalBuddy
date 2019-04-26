@@ -5,27 +5,24 @@ function Footer(){
   return(
     <footer className="footer">
       <div className="footerLeft">
-        <ul>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
+        <ul className="lists">
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Cookies</li>
         </ul>
       </div>
       <div className="footerMiddle">
-        <ul>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
+        <ul className="lists">
+          <li>Contact</li>
+          <li>Careers</li>
           <li>item</li>
         </ul>
       </div>
       <div className="footerRight">
-        <ul>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
+        <ul className="lists">
+          <li>Press</li>
+          <li>Settings</li>
+          <li>Admin</li>
         </ul>
       </div>
     </footer>

@@ -1,8 +1,9 @@
-import React from 'react';
+ import React from 'react';
 import NewPost from './NewPost';
 import LiveFeed from './LiveFeed';
 import styles from '../scss/styles.scss';
 import { Switch, Route } from 'react-router-dom';
+import Post from './Post'
 
 class Feed extends React.Component{
   
@@ -26,6 +27,7 @@ class Feed extends React.Component{
           <Switch>
             <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
             <LiveFeed postList={this.state.userPosts}/>
+            <Post newPost={this.state.UserPosts}/>
           </Switch>
         </div>
       )

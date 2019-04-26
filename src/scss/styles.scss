@@ -106,17 +106,7 @@ body{
   margin: 5% auto 0 auto;
 
 }
-.newPost{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 15%;
-  border: solid black 1px;
-  .newPostInput{
-    height: 500px;
-    width: 500px;
-  }
-}
+
 
 .liveFeed{
   display: flex;

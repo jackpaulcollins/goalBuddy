@@ -5,33 +5,19 @@ import PostBody from './PostBody';
 import PostStatistics from './PostStatistics';
 import PostFooter from './PostFooter';
 import styles from '../scss/styles.scss';
+import PropTypes from "prop-types";
 
 
 
-function Post(){
+function Post(prop){
   return(
     <div className="post">
-      <div>
-        <PostTopRow
-            image="blazers"
-            username="Portland TrailBlazers"
-            time="15 minutes ago"/>
-      </div>
-      <div className="postBody">
-        <PostBody
-          content="Blazers win!"/>
-      </div>
-      <div className="postStatistics">
-        <PostStatistics
-          likes="1.5"
-          comments="150"
-          shares="12"/>
-      </div>
-      <div className="postFooter">
-        <PostFooter/>
-      </div>
+      <h1>{prop.newPost}</h1>
     </div>
   )
 }
 
+Post.propTypes = {
+  newPost: PropTypes.string
+}
 export default Post;

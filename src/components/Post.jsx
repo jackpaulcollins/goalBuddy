@@ -6,7 +6,7 @@ import PostStatistics from './PostStatistics';
 import PostFooter from './PostFooter';
 import styles from '../scss/styles.scss';
 import PropTypes from "prop-types";
-
+import Likes from './Likes';
 
 
 function Post(prop){
@@ -14,7 +14,7 @@ function Post(prop){
   return(
     <div className="post">
       <h1>{prop.content}</h1>
-      <p>Like</p>
+      <Likes/>
     </div>
   )
 }

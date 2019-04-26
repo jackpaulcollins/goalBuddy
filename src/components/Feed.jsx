@@ -24,8 +24,12 @@ class Feed extends React.Component{
     console.log(this.state)
   };
   
-  handleNewLike(){
-    console.log("user clicked like")
+  handleNewLike(post){
+    let newMasterPostList = this.state.userPosts.slice();
+    newMasterPostList.likes ++;
+    newMasterPostList.push(post);
+    this.setState({userPosts: newMasterPostList});
+    console.log(this.state)
   }
   
     render(){

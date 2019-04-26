@@ -11,6 +11,7 @@ class Feed extends React.Component{
     super(props);
     this.state = {
       userPosts: [],
+      likes: 0
     };
     this.handleCreatingNewPost = this.handleCreatingNewPost.bind(this);
     this.handleNewLike = this.handleNewLike.bind(this);
@@ -25,8 +26,9 @@ class Feed extends React.Component{
   };
   
   handleNewLike(post){
+    console.log(this.state.likes)
     this.setState((state) => {
-    return {likes: (state.userPosts.likes + 1) };
+    return {likes: (state.likes + 1) };
   });
   }
   
@@ -34,7 +36,7 @@ class Feed extends React.Component{
       return(
         <div className="feed">
             <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-            <LiveFeed newPost={this.state.userPosts} likes={this.state.userPosts.likes} onNewLike={this.handleNewLike}/>
+            <LiveFeed newPost={this.state.userPosts} likes={this.state.likes} onNewLike={this.handleNewLike}/>
         </div>
       )
     }

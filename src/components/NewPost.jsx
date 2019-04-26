@@ -12,7 +12,7 @@ function NewPost(props){
   function handleNewPost(event) {
     event.preventDefault();
     console.log(_content.value)
-    props.onNewPost({ content: _content.value, likes: 0, id: v4()});
+    props.onNewPost({ content: _content.value, id: v4()});
   }
   
   return(

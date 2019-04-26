@@ -16,9 +16,11 @@ class Feed extends React.Component{
   };
   
   handleCreatingNewPost(post){
-    let newMasterPostList = this.state.UserPosts.slice();
+    console.log('check');
+    let newMasterPostList = this.state.userPosts.slice();
     newMasterPostList.push(post);
     this.setState({userPosts: newMasterPostList});
+    console.log(this.state)
   };
   
     render(){

@@ -14,6 +14,7 @@ function Post(prop){
   return(
     <div className="post">
       <h1>{prop.content}</h1>
+      <p>Like</p>
     </div>
   )
 }

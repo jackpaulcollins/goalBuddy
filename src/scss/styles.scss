@@ -171,11 +171,31 @@ body{
 //Footer styling
 
 .footer{
-  height: 200px;
+  display: flex;
+  justify-content: space-around;
   width: 100vw;
   background-color: #93E853;
   border-top: 2px solid lightgray;
   margin-top: 5%;
+}
+
+.footerLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footerMiddle{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.footerRight{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
 }
 //Footer Styling
 //end Body styling

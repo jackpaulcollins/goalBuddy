@@ -1,7 +1,8 @@
 import React from 'react';
 import Post from './Post';
+import PropTypes from "prop-types";
 
-function LiveFeed(){
+function LiveFeed(props){
   return(
     <div className="liveFeed">
       <Post/>
@@ -12,4 +13,7 @@ function LiveFeed(){
   )
 };
 
+LiveFeed.propTypes = {
+  postList: PropTypes.array
+}
 export default LiveFeed;

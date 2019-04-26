@@ -14,8 +14,10 @@ class Feed extends React.Component{
     this.handleCreatingNewPost = this.handleCreatingNewPost.bind(this);
   };
   
-  handleCreatingNewPost(){
-    alert('the user just clicked submit');
+  handleCreatingNewPost(post){
+    let newMasterPostList = this.state.UserPosts.slice();
+    newMasterPostList.push(post);
+    this.setState({userPosts: newMasterPostList});
   };
   
     render(){
@@ -23,7 +25,7 @@ class Feed extends React.Component{
         <div className="feed">
           <Switch>
             <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-            <LiveFeed/>
+            <LiveFeed postList={this.state.userPosts}/>
           </Switch>
         </div>
       )

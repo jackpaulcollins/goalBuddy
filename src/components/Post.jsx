@@ -10,14 +10,15 @@ import PropTypes from "prop-types";
 
 
 function Post(prop){
+  console.log(prop)
   return(
     <div className="post">
-      <h1>{prop.newPost}</h1>
+      <h1>{prop.content}</h1>
     </div>
   )
 }
 
 Post.propTypes = {
-  newPost: PropTypes.string
+  content: PropTypes.string
 }
 export default Post;

@@ -26,11 +26,8 @@ class Feed extends React.Component{
     render(){
       return(
         <div className="feed">
-          <Switch>
             <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-            <LiveFeed postList={this.state.userPosts}/>
-            <Post newPost={this.state.UserPosts}/>
-          </Switch>
+            <LiveFeed newPost={this.state.userPosts}/>
         </div>
       )
     }

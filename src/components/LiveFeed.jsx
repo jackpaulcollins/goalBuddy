@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 function LiveFeed(props){
   return(
     <div className="liveFeed">
-      <Post/>
-      <Post/>
-      <Post/>
-      <Post/>
+      {props.newPost.map((post, index)=>
+        <Post content={post.content}
+              key={post.id}/>
+            )}
     </div>
   )
 };
 
 LiveFeed.propTypes = {
-  postList: PropTypes.array
+  newPost: PropTypes.array
 }
 export default LiveFeed;

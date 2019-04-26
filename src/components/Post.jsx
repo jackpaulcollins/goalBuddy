@@ -13,13 +13,14 @@ function Post(props){
   return(
     <div className="post">
       <h1>{props.content}</h1>
-      <Likes onNewLike={props.onNewLike}/>
+      <Likes onNewLike={props.onNewLike} likes={props.likes}/>
     </div>
   )
 }
 
 Post.propTypes = {
   content: PropTypes.string,
-  onNewLike: PropTypes.func
+  onNewLike: PropTypes.func,
+  likes: PropTypes.number
 }
 export default Post;

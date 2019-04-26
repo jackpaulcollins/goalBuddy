@@ -8,7 +8,8 @@ function LiveFeed(props){
       {props.newPost.map((post, index)=>
         <Post content={post.content}
               key={post.id}
-              onNewLike={props.onNewLike}/>
+              onNewLike={props.onNewLike}
+              likes={props.likes}/>
             )}
     </div>
   )
@@ -16,6 +17,7 @@ function LiveFeed(props){
 
 LiveFeed.propTypes = {
   newPost: PropTypes.array,
-  onNewLike: PropTypes.func
+  onNewLike: PropTypes.func,
+  likes: PropTypes.number
 }
 export default LiveFeed;

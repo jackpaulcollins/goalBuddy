@@ -15,6 +15,7 @@ function Likes(props){
 }
 
 Likes.propTypes = {
-  onNewLike: PropTypes.func
+  onNewLike: PropTypes.func,
+  likes: PropTypes.number
 }
 export default Likes;

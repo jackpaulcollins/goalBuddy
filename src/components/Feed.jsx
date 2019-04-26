@@ -25,18 +25,16 @@ class Feed extends React.Component{
   };
   
   handleNewLike(post){
-    let newMasterPostList = this.state.userPosts.slice();
-    newMasterPostList.likes ++;
-    newMasterPostList.push(post);
-    this.setState({userPosts: newMasterPostList});
-    console.log(this.state)
+    this.setState((state) => {
+    return {likes: state.userPosts.likes + 1 };
+  });
   }
   
     render(){
       return(
         <div className="feed">
             <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-            <LiveFeed newPost={this.state.userPosts} onNewLike={this.handleNewLike}/>
+            <LiveFeed newPost={this.state.userPosts} likes={this.state.userPosts.likes} onNewLike={this.handleNewLike}/>
         </div>
       )
     }

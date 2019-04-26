@@ -9,17 +9,17 @@ import PropTypes from "prop-types";
 import Likes from './Likes';
 
 
-function Post(prop){
-  console.log(prop)
+function Post(props){
   return(
     <div className="post">
-      <h1>{prop.content}</h1>
-      <Likes/>
+      <h1>{props.content}</h1>
+      <Likes onNewLike={props.onNewLike}/>
     </div>
   )
 }
 
 Post.propTypes = {
-  content: PropTypes.string
+  content: PropTypes.string,
+  onNewLike: PropTypes.func
 }
 export default Post;

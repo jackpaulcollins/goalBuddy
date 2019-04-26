@@ -9,7 +9,7 @@ function LiveFeed(props){
         <Post content={post.content}
               key={post.id}
               onNewLike={props.onNewLike}
-              likes={props.likes}/>
+              likes={post.likes}/>
             )}
     </div>
   )

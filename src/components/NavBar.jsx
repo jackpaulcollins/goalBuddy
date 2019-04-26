@@ -13,6 +13,7 @@ function NavBar(){
             "navLogo" src={g}/>
         </div>
         <div className="navRight">
+            <FontAwesomeIcon icon="inbox" />
             <input type='text'
                     className='navBarSearch'
                     placeholder='Search'/>

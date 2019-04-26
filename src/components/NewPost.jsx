@@ -6,13 +6,14 @@ import { v4 } from 'uuid';
 
 function NewPost(props){
   
-  function NewPostForm(props){
+
   let _content = null;
-}
+
 
   function handleNewPost(event) {
     event.preventDefault();
-    props.onNewPost({ content: _content.value });
+    console.log(_content.value)
+    props.onNewPost({ content: _content.value, id: v4()});
   }
   
   return(
@@ -23,7 +24,7 @@ function NewPost(props){
                 id='content'
                 className='newPostInput'
                 placeholder='Whats on your mind?'
-                ref={(input) => { _content = input, id: v4();}}/>
+                ref={(input) => {_content = input;}}/>
         <button type='submit'>Submit</button>
       </form>
     </div>

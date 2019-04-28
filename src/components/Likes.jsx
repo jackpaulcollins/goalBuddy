@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 function Likes(props){
 
-  
-  function handleNewLike(){
+
+  function handleNewLike(post){
     props.onNewLike();
   }
-  
+
   return(
     <p onClick={handleNewLike}>Like{props.likes}</p>
   )

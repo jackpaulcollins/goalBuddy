@@ -7,16 +7,17 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 const initialState = {
-  likes: 5
+  likes: 0
 }
 function likeReducer(state = initialState, action ){
   switch (action.type) {
-    case "LIKE":
+    case 'LIKE':
       return {
         likes: state.likes  + 1
-      }
+      };
+      default:
+        return state;
   }
-  return state;
 }
 
 

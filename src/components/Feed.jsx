@@ -14,7 +14,6 @@ class Feed extends React.Component{
       userPosts: [],
     };
     this.handleCreatingNewPost = this.handleCreatingNewPost.bind(this);
-    this.handleNewLike = this.handleNewLike.bind(this);
   };
 
   handleCreatingNewPost(post){
@@ -27,16 +26,16 @@ class Feed extends React.Component{
 
 
 
-    render(){
-      return(
-        <div className="feed">
-            <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-            <LiveFeed newPost={this.state.userPosts}/>
-        </div>
-      )
-    }
+  render(){
+    return(
+      <div className="feed">
+          <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
+          <LiveFeed newPost={this.state.userPosts}/>
+      </div>
+    )
+  }
 };
 
 
-export default connect(mapStateToProps)(Feed);
+export default Feed;
 

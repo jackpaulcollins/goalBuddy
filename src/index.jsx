@@ -6,10 +6,11 @@ import { HashRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-function likeReducer(){
-  return{
-    likes: 5
-  }
+const initialState = {
+  likes: 5
+}
+function likeReducer(state = initialState, action ){
+  return state;
 }
 const store = createStore(likeReducer);
 

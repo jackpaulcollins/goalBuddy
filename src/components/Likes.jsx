@@ -7,7 +7,7 @@ class Likes extends React.Component{
 
   render(props){
     return(
-      <p>likes: {this.props.likes}</p>
+      <p>likes {this.props.likes}</p>
     )
   }
 }

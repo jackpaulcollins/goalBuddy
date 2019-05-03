@@ -219,3 +219,29 @@ body{
 }
 //Footer Styling
 //end Body styling
+
+
+
+//Profile Page styles
+
+.profile-card{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+  border: solid lightgrey 1px;
+  width: 40%;
+}
+
+.profile-engage{
+  justify-content: center;
+  justify-content: space-around;
+  display: flex;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  border: solid lightgrey 1px;
+}
+//End Profile Page styles

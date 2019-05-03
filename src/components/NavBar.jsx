@@ -5,6 +5,9 @@ import g from '../assets/images/g.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInbox } from '@fortawesome/free-solid-svg-icons'
 import { faCog } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
+
+
 
 function NavBar(){
 
@@ -12,6 +15,7 @@ function NavBar(){
     <div>
       <nav className="nav">
         <div className="navLeft">
+        <Link to="/">Home</Link> 
           <img className=
             "navLogo" src={g}/>
         </div>

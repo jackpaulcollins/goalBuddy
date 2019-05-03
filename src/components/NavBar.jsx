@@ -26,7 +26,7 @@ function NavBar(){
                     className='navBarSearch'
                     placeholder='Search'/>
           <div className="NavProfilePicture">
-            <ProfilePicture/>
+            <Link to="/profile"><ProfilePicture/></Link>
           </div>
         </div>
       </nav>

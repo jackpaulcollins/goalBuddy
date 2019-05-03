@@ -5,6 +5,8 @@ import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
+import Profile from './components/Profile';
 
 const initialState = {
   userPosts: ['test post'],
@@ -29,7 +31,10 @@ const render = (Component) => {
   ReactDOM.render(
     <Provider store={store}>
       <HashRouter>
-        <Component/>
+        <Switch>
+          <Route exact path='/' component={Component} />
+          <Route path='/profile' component={Profile} />
+        </Switch>
       </HashRouter>
     </Provider>,
     document.getElementById('react-app-root')

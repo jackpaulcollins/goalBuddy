@@ -10,16 +10,14 @@ function LiveFeed(props){
   return(
     <div className="liveFeed">
       <Post content={props.userPosts}/>
+      <h1>{props.likes}</h1>
     </div>
   )
 };
 
-LiveFeed.propTypes = {
-  posts: PropTypes.array,
-}
-
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   userPosts: state.userPosts,
+  likes: state.likes
 });
 
 export default connect(mapStateToProps)(LiveFeed);

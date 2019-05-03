@@ -10,7 +10,7 @@ import Profile from './components/Profile';
 
 const initialState = {
   userPosts: ['test post'],
-  likes: 0
+  likes: 1
 }
 function likeReducer(state = initialState, action ){
   switch (action.type) {

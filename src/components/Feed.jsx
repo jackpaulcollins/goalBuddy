@@ -8,34 +8,22 @@ import { connect } from 'react-redux';
 
 class Feed extends React.Component{
 
-  constructor(props){
-    super(props);
-    this.state = {
-      userPosts: [],
-    };
-    this.handleCreatingNewPost = this.handleCreatingNewPost.bind(this);
-  };
-
-  handleCreatingNewPost(post){
-    console.log('check');
-    let newMasterPostList = this.state.userPosts.slice();
-    newMasterPostList.push(post);
-    this.setState({userPosts: newMasterPostList});
-    console.log(this.state)
-  };
-
 
 
   render(){
     return(
       <div className="feed">
           <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-          <LiveFeed newPost={this.state.userPosts}/>
+          <LiveFeed posts={this.props.userPosts}/>
       </div>
     )
   }
 };
 
+const mapStateToProps = state => ({
+  userPosts: state.userPosts,
+  likes: state.likes
+})
 
-export default Feed;
+export default connect(mapStateToProps)(Feed);
 

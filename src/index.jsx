@@ -7,6 +7,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 const initialState = {
+  userPosts: ['test post'],
   likes: 0
 }
 function likeReducer(state = initialState, action ){

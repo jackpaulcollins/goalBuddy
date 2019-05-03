@@ -1,9 +1,4 @@
 import React from 'react';
-import PostTopRow from './PostTopRow';
-import PostMenu from './PostMenu';
-import PostBody from './PostBody';
-import PostStatistics from './PostStatistics';
-import PostFooter from './PostFooter';
 import styles from '../scss/styles.scss';
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
@@ -18,7 +13,7 @@ class Post extends React.Component{
   render(props){
     return(
       <div className="post">
-        <h1>{props.content}</h1>
+        <h1>{this.props.content}</h1>
         <div>
           <h2 onClick={this.handleLike}>LIKE</h2>
           <p>likes: {this.props.likes}</p>
@@ -29,7 +24,8 @@ class Post extends React.Component{
 }
 
 Post.propTypes = {
-  content: PropTypes.string,
+  content: PropTypes.array,
 }
 
-export default connect()(Post);
+
+export default Post;

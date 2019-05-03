@@ -1,27 +1,24 @@
 import React from 'react';
 import Post from './Post';
 import PropTypes from "prop-types";
+import { connect } from 'react-redux';
 
 function LiveFeed(props){
   
 
-
-
   return(
     <div className="liveFeed">
-      {props.newPost.map((post, index)=>
-        <Post content={post.content}
-              key={post.id}
-              onNewLike={props.onNewLike}
-              likes={post.likes}/>
-            )}
+      <Post content={props.userPosts}/>
     </div>
   )
 };
 
 LiveFeed.propTypes = {
-  newPost: PropTypes.array,
-  onNewLike: PropTypes.func,
-  likes: PropTypes.number
+  posts: PropTypes.array,
 }
-export default LiveFeed;
+
+const mapStateToProps = state => ({
+  userPosts: state.userPosts,
+});
+
+export default connect(mapStateToProps)(LiveFeed);

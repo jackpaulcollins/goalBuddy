@@ -4,12 +4,15 @@ import PropTypes from "prop-types";
 
 class Post extends React.Component{
   
+
+  
   handleLike(){
     console.log(this.props)
       this.props.dispatch({ type: 'LIKE' });
     };
     
   render(props){
+      console.log(this.props)
     return(
       <div className="post">
         <h1>{this.props.content}</h1>
@@ -23,7 +26,8 @@ class Post extends React.Component{
 }
 
 Post.propTypes = {
-  content: PropTypes.array,
+  content: PropTypes.string,
+  likes: PropTypes.number
 }
 
 

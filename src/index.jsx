@@ -9,7 +9,7 @@ import { Switch, Route } from 'react-router-dom';
 import Profile from './components/Profile';
 
 const initialState = {
-  userPosts: ['test post'],
+  userPosts: 'test post',
   likes: 1
 }
 function likeReducer(state = initialState, action ){

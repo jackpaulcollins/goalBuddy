@@ -9,8 +9,7 @@ function LiveFeed(props){
 
   return(
     <div className="liveFeed">
-      <Post content={props.userPosts}/>
-      <h1>{props.likes}</h1>
+      <Post content={props.userPosts} likes={props.likes}/>
     </div>
   )
 };

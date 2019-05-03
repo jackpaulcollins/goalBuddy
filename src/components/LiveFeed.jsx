@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 function LiveFeed(props){
   
+  console.log(props)
 
   return(
     <div className="liveFeed">

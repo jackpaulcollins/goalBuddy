@@ -10,9 +10,18 @@ const initialState = {
   likes: 5
 }
 function likeReducer(state = initialState, action ){
+  switch (action.type) {
+    case "LIKE":
+      return {
+        likes: state.likes  + 1
+      }
+  }
   return state;
 }
+
+
 const store = createStore(likeReducer);
+store.dispatch({ type: "LIKE"})
 
 const render = (Component) => {
   ReactDOM.render(

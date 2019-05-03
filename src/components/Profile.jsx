@@ -5,7 +5,11 @@ function Profile(){
   return(
     <div>
       <NavBar/>
-      <h1>Profile Page</h1>
+      <div>
+        <nav><span>Goals</span> | <span>About</span> | <span>Photos</span></nav>
+        <h1>Jack Collins</h1>
+      </div>
+      
     </div>
   )
 }

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 function Post(props){
 
-  console.log(props)
 
     return(
       <div className="post">

@@ -12,14 +12,14 @@ import logger from 'redux-logger';
 import { postReducer } from './reducers/post-reducer';
 import { likeReducer } from './reducers/like-reducer';
 import { initialState } from './constants/initialState';
-import * as types from './constants/ActionTypes';
-export default types;
+
 
 
 
 
 const rootReducer = combineReducers({like: likeReducer, post: postReducer});
 const store = createStore(rootReducer, applyMiddleware(logger));
+
 
 const render = (Component) => {
   ReactDOM.render(

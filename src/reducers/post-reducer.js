@@ -1,13 +1,14 @@
 import { initialState } from '../constants/initialState';
-import constants from '../constants/ActionTypes';
-const {types} = constants;
+import c from './../constants';
+
 
 export function postReducer(state = initialState, action){
   switch (action.type){
-  case types.NEW_POST:
-    return
-      userPosts: 'Test'
-  case types.TEST_FUNCTION:
+  case c.NEW_POST:
+    console.log(action.form)
+      return state;
+
+  case c.TEST_FUNCTION:
     alert('success')
   default:
     return state;

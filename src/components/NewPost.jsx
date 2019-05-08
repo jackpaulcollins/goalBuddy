@@ -2,18 +2,20 @@ import React from 'react';
 import styles from '../scss/styles.scss';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import {connect} from 'react-redux';
+import {onNewPost} from './../actions';
 
 
 function NewPost({dispatch}){
 
 
-  let _content = null;
+    let _content = null;
 
-  function handleNewPost(event) {
-    event.preventDefault();
-    console.log(_content.value);
-    ({ content: _content.value, id: v4()});
-  }
+    function handleNewPost(e){
+      e.preventDefault();
+      let post = {content: _content.value, id: v4()}
+      dispatch(onNewPost(post))
+    }
 
   return(
     <div className='newPost'>
@@ -31,4 +33,4 @@ function NewPost({dispatch}){
 }
 
 
-export default NewPost;
+export default connect()(NewPost);

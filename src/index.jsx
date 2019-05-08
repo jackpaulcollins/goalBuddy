@@ -11,7 +11,9 @@ import { combineReducers } from 'redux';
 import logger from 'redux-logger';
 import { postReducer } from './reducers/post-reducer';
 import { likeReducer } from './reducers/like-reducer';
-import { initialState } from './constants/initial-state';
+import { initialState } from './constants/initialState';
+import * as types from './constants/ActionTypes';
+export default types;
 
 
 

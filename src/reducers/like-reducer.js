@@ -1,8 +1,9 @@
-import { initialState } from '../constants/initial-state';
+import { initialState } from '../constants/initialState';
+import c from '../constants/ActionTypes';
 
 export function likeReducer(state = initialState, action ){
   switch (action.type) {
-  case 'LIKE':
+  case 'NEW_LIKE':
     return {
       likes: state.likes  + 1
     };

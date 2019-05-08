@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
 
-function NewPost(props){
-  
+function NewPost({dispatch}){
+
 
   let _content = null;
 
   function handleNewPost(event) {
     event.preventDefault();
     console.log(_content.value);
-    props.onNewPost({ content: _content.value, id: v4()});
+    ({ content: _content.value, id: v4()});
   }
-  
+
   return(
     <div className='newPost'>
       <h1>Create a Post</h1>
@@ -30,9 +30,5 @@ function NewPost(props){
   );
 }
 
-NewPost.propTypes = {
-  onNewPost: PropTypes.func
-};
 
 export default NewPost;
-

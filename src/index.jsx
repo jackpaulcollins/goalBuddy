@@ -3,29 +3,45 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import Profile from './components/Profile';
+import { applyMiddleware, createStore } from 'redux';
+import { combineReducers } from 'redux';
+import logger from 'redux-logger';
 
-const initialState = {
-  userPosts: 'test post',
-  likes: 1
-}
+
+const initialState ={
+  userPosts: 'Test Post'
+};
+
 function likeReducer(state = initialState, action ){
   switch (action.type) {
-    case 'LIKE':
-      return {
-        likes: state.likes  + 1
-      };
-      default:
-        return state;
+  case 'LIKE':
+    return {
+      likes: state.likes  + 1
+    };
+  default:
+    return state;
+  }
+}
+
+function postReducer(state = initialState, action){
+  switch (action.type){
+  case 'POST':
+    return{
+      userPosts: 'Test'
+    };
+  default:
+    return state;
   }
 }
 
 
-const store = createStore(likeReducer);
-store.dispatch({ type: "LIKE"})
+
+
+const rootReducer = combineReducers({like: likeReducer, post: postReducer});
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 const render = (Component) => {
   ReactDOM.render(

@@ -7,7 +7,7 @@ function Requests(){
       <h5>Jake is looking for a gym buddy</h5>
       <h5>Jake is looking for a gym buddy</h5>
     </div>
-  )
+  );
 }
 
 export default Requests;

@@ -5,25 +5,25 @@ import styles from '../scss/styles.scss';
 import { Switch, Route } from 'react-router-dom';
 import Post from './Post';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Feed extends React.Component{
 
 
 
-  render(){
+  render(props){
     return(
       <div className="feed">
-          <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-          <LiveFeed posts={this.props.userPosts}/>
+        <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
+        <h1>{this.props.userPosts}</h1>
+        <LiveFeed/>
       </div>
-    )
+    );
   }
-};
+}
 
 const mapStateToProps = state => ({
-  userPosts: state.userPosts,
-  likes: state.likes
-})
+  userPosts: state.post.userPosts
+});
 
 export default connect(mapStateToProps)(Feed);
-

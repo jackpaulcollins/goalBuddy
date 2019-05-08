@@ -8,7 +8,7 @@ function Body(){
       <SideBar/>
       <Feed/>
     </div>
-  )
+  );
 }
 
 export default Body;

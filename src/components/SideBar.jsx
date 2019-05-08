@@ -13,7 +13,7 @@ function SideBar(){
       <AboutUser/>
       <UserStats/>
     </div>
-  )
+  );
 }
 
 export default SideBar;

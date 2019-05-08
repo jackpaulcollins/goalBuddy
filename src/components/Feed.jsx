@@ -15,8 +15,7 @@ class Feed extends React.Component{
     return(
       <div className="feed">
         <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-        <h1>{this.props.userPosts}</h1>
-        <LiveFeed/>
+        <LiveFeed content={this.props.userPosts}/>
       </div>
     );
   }

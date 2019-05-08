@@ -2,25 +2,24 @@ import React from 'react';
 import styles from '../scss/styles.scss';
 import PropTypes from 'prop-types';
 
-class Post extends React.Component{
+function Post(props){
 
+  console.log(props)
 
-
-  render(props){
     return(
       <div className="post">
-        <h1></h1>
-        <div>
-          <h2>LIKE</h2>
-          <p>likes:</p>
+        <h1>{props.content}</h1>
+        <div className="post-statistics">
+          <p>LIKE</p>
+          <p>likes: {props.likes}</p>
         </div>
       </div>
     );
   }
-}
 
 Post.propTypes = {
-  content: PropTypes.string
+  content: PropTypes.string,
+  likes: PropTypes.number
 }
 
 export default Post;

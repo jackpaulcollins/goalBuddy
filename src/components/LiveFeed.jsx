@@ -1,20 +1,23 @@
 import React from 'react';
 import Post from './Post';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+
 
 function LiveFeed(props){
 
-console.log(props)
   return(
     <div className="liveFeed">
-      <Post content={props.userPosts}/>
+      {props.content.map((post, index)=>{
+        return(
+          <Post content={post.content} likes={post.likes} key={index}/>
+        )
+      })}
     </div>
   );
 }
 
 LiveFeed.propTypes = {
-  userPosts: PropTypes.string
+  content: PropTypes.array
 }
 
 export default LiveFeed;

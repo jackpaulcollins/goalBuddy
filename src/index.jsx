@@ -11,8 +11,33 @@ import { combineReducers } from 'redux';
 import logger from 'redux-logger';
 
 
-const initialState ={
-  userPosts: 'Test Post'
+const initialState = {
+  userPosts:[
+    {
+      content: 'Test Post 1',
+      likes: 0
+    },
+    {
+      content: 'Test Post 2',
+      likes: 0
+    },
+    {
+      content: 'Test Post 3',
+      likes: 0
+    },
+    {
+      content: 'Test Post 4',
+      likes: 0
+    },
+    {
+      content: 'Test Post 5',
+      likes: 0
+    },
+    {
+      content: 'Test Post 6',
+      likes: 0
+    },
+  ]
 };
 
 function likeReducer(state = initialState, action ){

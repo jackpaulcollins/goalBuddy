@@ -18,7 +18,7 @@ console.log(props)
 }
 
 LiveFeed.propTypes = {
-  content: PropTypes.object
+  content: PropTypes.array
 }
 
 export default LiveFeed;

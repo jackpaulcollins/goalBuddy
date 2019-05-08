@@ -1,12 +1,10 @@
 import { initialState } from '../constants/initialState';
-import c from '../constants/ActionTypes';
+import c from './../constants';
 
-export function likeReducer(state = initialState, action ){
-  switch (action.type) {
-  case 'NEW_LIKE':
-    return {
-      likes: state.likes  + 1
-    };
+export function likeReducer(state = initialState, action){
+  switch (action.type){
+  case c.NEW_LIKE:
+    alert('generated from like reducer')
   default:
     return state;
   }

@@ -9,58 +9,9 @@ import Profile from './components/Profile';
 import { applyMiddleware, createStore } from 'redux';
 import { combineReducers } from 'redux';
 import logger from 'redux-logger';
-
-
-const initialState = {
-  userPosts:[
-    {
-      content: 'Test Post 1',
-      likes: 0
-    },
-    {
-      content: 'Test Post 2',
-      likes: 0
-    },
-    {
-      content: 'Test Post 3',
-      likes: 0
-    },
-    {
-      content: 'Test Post 4',
-      likes: 0
-    },
-    {
-      content: 'Test Post 5',
-      likes: 0
-    },
-    {
-      content: 'Test Post 6',
-      likes: 0
-    },
-  ]
-};
-
-function likeReducer(state = initialState, action ){
-  switch (action.type) {
-  case 'LIKE':
-    return {
-      likes: state.likes  + 1
-    };
-  default:
-    return state;
-  }
-}
-
-function postReducer(state = initialState, action){
-  switch (action.type){
-  case 'POST':
-    return{
-      userPosts: 'Test'
-    };
-  default:
-    return state;
-  }
-}
+import { postReducer } from './reducers/post-reducer';
+import { likeReducer } from './reducers/like-reducer';
+import { initialState } from './constants/initial-state';
 
 
 

@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 
 
 function LiveFeed(props){
-
+console.log(props)
   return(
     <div className="liveFeed">
-      {props.content.map((post, index)=>{
+      {Object.keys(props.content).map(post=>{
+        let currentPost = props.content[post];
         return(
-          <Post content={post.content} likes={post.likes} key={index}/>
+          <Post content={currentPost.content} likes={currentPost.likes} key={post}/>
         )
       })}
     </div>
@@ -17,7 +18,7 @@ function LiveFeed(props){
 }
 
 LiveFeed.propTypes = {
-  content: PropTypes.array
+  content: PropTypes.object
 }
 
 export default LiveFeed;

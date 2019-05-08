@@ -13,7 +13,7 @@ function NewPost({dispatch}){
 
     function handleNewPost(e){
       e.preventDefault();
-      let post = {content: _content.value, id: v4()}
+      let post = {content: _content.value, likes: 0}
       dispatch(onNewPost(post))
     }
 

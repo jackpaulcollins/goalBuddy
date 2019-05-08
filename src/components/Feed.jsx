@@ -22,7 +22,7 @@ class Feed extends React.Component{
 }
 
 const mapStateToProps = state => ({
-  userPosts: state.post.userPosts
+  userPosts: state.post
 });
 
 export default connect(mapStateToProps)(Feed);

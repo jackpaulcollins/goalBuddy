@@ -8,17 +8,18 @@ import { Switch, Route } from 'react-router-dom';
 import Profile from './components/Profile';
 import { applyMiddleware, createStore } from 'redux';
 import { combineReducers } from 'redux';
-import logger from 'redux-logger';
 import { postReducer } from './reducers/post-reducer';
 import { likeReducer } from './reducers/like-reducer';
 import { initialState } from './constants/initialState';
+import middlewareLogger from './middleware/middleware-logger';
+import thunkMiddleware from 'redux-thunk';
 
 
 
 
 
 const rootReducer = combineReducers({like: likeReducer, post: postReducer});
-const store = createStore(rootReducer, applyMiddleware(logger));
+const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
 
 const render = (Component) => {

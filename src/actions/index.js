@@ -4,6 +4,7 @@ export const testFunction = () => ({
   type: types.TEST_FUNCTION
 })
 
-export const onNewPost = () => ({
-  type: types.NEW_POST
+export const onNewPost = (post) => ({
+  type: types.NEW_POST,
+  post: post
 })

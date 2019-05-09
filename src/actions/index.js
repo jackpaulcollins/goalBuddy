@@ -9,6 +9,7 @@ export const onNewPost = (post) => ({
   post: post
 })
 
-export const onNewLike = () => ({
-  type: types.NEW_LIKE
+export const onNewLike = (id) => ({
+  type: types.NEW_LIKE,
+  id: id
 })

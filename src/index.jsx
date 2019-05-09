@@ -18,7 +18,7 @@ import thunkMiddleware from 'redux-thunk';
 
 
 
-const rootReducer = combineReducers({like: likeReducer, post: postReducer});
+const rootReducer = combineReducers({post: postReducer});
 const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
 

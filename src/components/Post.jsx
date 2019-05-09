@@ -6,10 +6,8 @@ import {onNewLike} from './../actions';
 
 function Post(props){
   
-  console.log('outide doalike', props)
     
-  function doALike(id) {
-    console.log('inside doalike', id)
+  function handleLike(id) {
     const { dispatch } = props
     dispatch(onNewLike(id))
   }
@@ -18,7 +16,7 @@ function Post(props){
       <div className="post">
         <h1>{props.content}</h1>
         <div className="post-statistics">
-          <p onClick={() => {doALike(props.id)}}>LIKE</p>
+          <p onClick={() => {handleLike(props.id)}}>LIKE</p>
           <p>likes: {props.likes}</p>
         </div>
       </div>

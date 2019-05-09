@@ -9,7 +9,6 @@ import Profile from './components/Profile';
 import { applyMiddleware, createStore } from 'redux';
 import { combineReducers } from 'redux';
 import { postReducer } from './reducers/post-reducer';
-import { likeReducer } from './reducers/like-reducer';
 import { initialState } from './constants/initialState';
 import middlewareLogger from './middleware/middleware-logger';
 import thunkMiddleware from 'redux-thunk';

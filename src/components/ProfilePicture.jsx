@@ -3,7 +3,7 @@ import profilepicture from '../assets/images/profilepicture.jpg';
 
 function ProfilePicture(){
   return(
-    <img id="profilePicture" src={profilepicture}></img>
+    <img className="profile-picture" src={profilepicture}></img>
   );
 }
 

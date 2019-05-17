@@ -2,21 +2,25 @@ import React from 'react';
 import styles from '../../scss/styles.scss';
 import ProfilePicture from '../ProfilePicture';
 import { Link } from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInbox } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import SignedInLinks from './SignedInLinks';
+import SignedOutLinks from './SignedOutLinks';
+
 
 
 
 function NavBar(){
 
   return(
-    <div>
-      <AppBar position="static">
-        <Toolbar>
-          <Link to="/profile" className="profile-picture"><ProfilePicture/></Link>
-        </Toolbar>
-      </AppBar>
-    </div>
+      <nav className="nav-wrapper green darken-1">
+        <div className="container">
+          <Link to="/">Goal Buddy</Link>
+          <SignedInLinks/>
+          <SignedOutLinks/>
+        </div>
+      </nav>
   );
 }
 

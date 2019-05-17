@@ -7,34 +7,9 @@
 }
 
 //NavBar styling
-.nav{
-  display: flex;
-  justify-content: space-around;
-  background-color: #93E853;
-  border-bottom: 2px solid lightgray;
-  padding: 1%;
-  .navLogo{
-    height: 70%;
-  }
-}
 
-.navLeft{
-  width: 75%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.navRight{
-  display: flex;
-  width: 45%;
-  justify-content: space-between;
-  align-items: center;
-    .NavProfilePicture{
-      width: 100px;
-    }
-
-
+.profile-picture {
+  width: 5%;
 }
 
 //end NavBar styling

@@ -1,6 +1,6 @@
 import React from 'react';
 import SideBar from './Sidebar';
-import Feed from './Feed';
+import Feed from '../feed/Feed';
 
 function Body(){
   return(

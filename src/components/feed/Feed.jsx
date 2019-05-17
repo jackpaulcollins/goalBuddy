@@ -1,5 +1,5 @@
 import React from 'react';
-import NewPost from './NewPost';
+import NewPost from '../signedInProfile/NewPost';
 import LiveFeed from './LiveFeed';
 import styles from '../../scss/styles.scss';
 import { Switch, Route } from 'react-router-dom';

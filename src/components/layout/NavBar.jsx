@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../scss/styles.scss';
-import ProfilePicture from './ProfilePicture';
+import styles from '../../scss/styles.scss';
+import ProfilePicture from '../ProfilePicture';
 import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar'

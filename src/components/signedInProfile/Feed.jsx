@@ -1,7 +1,7 @@
 import React from 'react';
 import NewPost from './NewPost';
 import LiveFeed from './LiveFeed';
-import styles from '../scss/styles.scss';
+import styles from '../../scss/styles.scss';
 import { Switch, Route } from 'react-router-dom';
 import Post from './Post';
 import { connect } from 'react-redux';

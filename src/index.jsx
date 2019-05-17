@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
-import Profile from './components/Profile';
+import Profile from './components/signedInProfile/Profile';
 import { applyMiddleware, createStore } from 'redux';
 import { combineReducers } from 'redux';
 import { postReducer } from './reducers/post-reducer';

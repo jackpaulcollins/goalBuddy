@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from './NavBar';
-import styles from '../scss/styles.scss';
+import NavBar from '../layout/NavBar';
+import styles from '../../scss/styles.scss';
 
 function Profile(){
   return(
@@ -19,7 +19,7 @@ function Profile(){
           <button>Report</button>
         </div>
       </div>
-      
+
     </div>
   );
 }

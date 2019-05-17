@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from '../scss/styles.scss';
+import styles from '../../scss/styles.scss';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {onNewLike} from './../actions';
+import {onNewLike} from '../../actions';
 
 function Post(props){
-  
-    
+
+
   function handleLike(id) {
     const { dispatch } = props
     dispatch(onNewLike(id))

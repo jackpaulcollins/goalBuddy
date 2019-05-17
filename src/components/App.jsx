@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './layout/Navbar';
-import Body from './Body';
-import Footer from './Footer';
+import Body from './signedInProfile/Body';
+import Footer from './layout/Footer';
 import styles from '../scss/styles.scss';
 
 function App(){

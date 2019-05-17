@@ -1,6 +1,6 @@
 import React from 'react';
 import Requests from './Requests';
-import ProfilePicture from './ProfilePicture';
+import ProfilePicture from '../ProfilePicture';
 import UserStats from './UserStats';
 import AboutUser from './AboutUser';
 import {connect} from 'react-redux';

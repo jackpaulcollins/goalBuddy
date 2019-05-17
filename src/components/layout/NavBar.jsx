@@ -8,15 +8,12 @@ import { faCog } from '@fortawesome/free-solid-svg-icons';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 
-
-
-
 function NavBar(){
 
   return(
       <nav className="nav-wrapper green darken-1">
         <div className="container">
-          <Link to="/">Goal Buddy</Link>
+          <Link to="/">GoalBuddy</Link>
           <SignedInLinks/>
           <SignedOutLinks/>
         </div>

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInbox } from '@fortawesome/free-solid-svg-icons';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import AppBar from '@material-ui/core/AppBar';
 
 
 
@@ -13,9 +14,9 @@ function NavBar(){
 
   return(
     <div>
-      <nav className="nav">
+      <AppBar position="static">
         <div className="navLeft">
-          <Link to="/">HOME</Link> 
+          <Link to="/">HOME</Link>
         </div>
         <div className="navRight">
           <FontAwesomeIcon icon={faInbox} />
@@ -27,7 +28,7 @@ function NavBar(){
             <Link to="/profile"><ProfilePicture/></Link>
           </div>
         </div>
-      </nav>
+      </AppBar>
     </div>
   );
 }

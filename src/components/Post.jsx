@@ -16,7 +16,7 @@ function Post(props){
       <div className="post">
         <h1>{props.content}</h1>
         <div className="post-statistics">
-          <p onClick={() => {handleLike(props.id)}}>LIKE</p>
+          <button onClick={() => {handleLike(props.id)}}>LIKE</button>
           <p>likes: {props.likes}</p>
         </div>
       </div>

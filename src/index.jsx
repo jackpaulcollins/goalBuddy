@@ -24,12 +24,7 @@ const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMi
 const render = (Component) => {
   ReactDOM.render(
     <Provider store={store}>
-      <HashRouter>
-        <Switch>
-          <Route exact path='/' component={Component} />
-          <Route path='/profile' component={Profile} />
-        </Switch>
-      </HashRouter>
+      <App />
     </Provider>,
     document.getElementById('react-app-root')
   );

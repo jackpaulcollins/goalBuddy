@@ -1,12 +1,12 @@
 import React from 'react';
 
-function PostDetail() {
-
+function PostDetail(props) {
+  const id = props.match.params.id;
   return(
     <div className="container section post-details">
       <div className="card blue-grey lighten-2">
         <div className="card-content white-text">
-          <span className="card-title">Post Author</span>
+          <span className="card-title">Post Author - {id}</span>
           <p>Post Content......</p>
         </div>
         <div className="card-action">

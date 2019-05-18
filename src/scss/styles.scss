@@ -126,10 +126,15 @@ body{
   margin: 8% auto 2% auto;
 }
 .post{
-  border: solid lightgray 1px;
-  border-radius: 5px;
+  display: flex;
+  text-align: center;
   width: 100%;
-  padding: 1%;
+  padding: 2%;
+  .card-action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .post-statistics{

@@ -13,11 +13,14 @@ function Post(props){
   }
 
     return(
-      <div className="post">
-        <h1>{props.content}</h1>
-        <div className="post-statistics">
-          <button onClick={() => {handleLike(props.id)}}>LIKE</button>
-          <p>likes: {props.likes}</p>
+      <div className="container section post">
+        <div className="card blue-grey lighten-2">
+          <span className="card-title"><h5>Post Author</h5></span>
+          <p>{props.content}</p>
+          <div className="card-action">
+            <button className="waves-effect waves-light btn" onClick={() => {handleLike(props.id)}}>LIKE</button>
+            <p>likes: {props.likes}</p>
+          </div>
         </div>
       </div>
     );

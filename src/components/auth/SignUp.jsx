@@ -47,7 +47,7 @@ class SignUp extends React.Component {
             <input type="text" id="lastName" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
-            <button className="waves-effect waves-light btn">Login</button>
+            <button className="waves-effect waves-light btn">Sign Up</button>
           </div>
         </form>
       </div>

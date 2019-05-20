@@ -1,6 +1,8 @@
 import React from 'react';
 import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
+import { createGoal } from '../../actions/goalActions';
+import { connect } from 'react-redux';
 
 class CreateGoal extends React.Component {
 
@@ -22,7 +24,7 @@ class CreateGoal extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state)
+    this.props.createGoal(this.state)
   }
 
 
@@ -53,4 +55,10 @@ class CreateGoal extends React.Component {
   }
 }
 
-export default CreateGoal;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createGoal: (goal) => dispatch(createGoal(goal))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateGoal);

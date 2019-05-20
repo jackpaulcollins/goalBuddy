@@ -47,6 +47,10 @@
 
 //Signed In Dashboard
 
+.signedin-header {
+  text-align: center;
+}
+
 .goal-summary{
   display: flex;
   width: 100%;
@@ -138,43 +142,20 @@ body{
 
 //Post styling
 
-.postTopRow{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container{
   width: 100%;
-  height: 70px;
-}
-
-.postTopRowPicture{
-  width: 50px;
-}
-
-.postTopRowMenu{
-  width: 25px;
-}
-
-.postBody{
-  margin: 8% auto 2% auto;
-}
-.post{
-  display: flex;
-  text-align: center;
-  width: 100%;
-  padding: 2%;
-  .card-action{
+  .post-card{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    padding: 2%;
+    .card-action{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
-}
-
-.post-statistics{
-  margin-top: 10%;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding-bottom: 1%;
 }
 
 //End Post Styling

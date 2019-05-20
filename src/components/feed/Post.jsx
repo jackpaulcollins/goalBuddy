@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../scss/styles.scss';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {onNewLike} from '../../actions';
+import {onNewLike} from '../../actions/postActions';
 
 function Post(props){
 
@@ -14,8 +14,8 @@ function Post(props){
 
     return(
       <div className="container section post">
-        <div className="card blue-grey lighten-2">
-          <span className="card-title"><h5>Post Author</h5></span>
+        <div className="card post-card">
+          <span className="card-title"><p>Post Author</p></span>
           <p>{props.content}</p>
           <div className="card-action">
             <button className="waves-effect waves-light btn" onClick={() => {handleLike(props.id)}}>LIKE</button>

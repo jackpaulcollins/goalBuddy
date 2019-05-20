@@ -3,7 +3,7 @@ import styles from '../../scss/styles.scss';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import {connect} from 'react-redux';
-import {onNewPost} from '../../actions';
+import {onNewPost} from '../../actions/postActions';
 
 
 function NewPost({dispatch}){

@@ -11,16 +11,19 @@ class Dashboard extends React.Component{
     console.log(goals)
 
     return(
-      <div className="dashboard container">
-        <div className="row">
-          <div className="col s12 m3">
-            <OpenGoals goals={goals}/>
-          </div>
+      <div>
+        <h2 className="signedin-header">Welcome Back, Jack!</h2>
+        <div className="dashboard container">
+          <div className="row">
+            <div className="col s12 m3">
+              <OpenGoals goals={goals}/>
+            </div>
           <div className="col s12 m8 offset-m1">
             <Feed/>
           </div>
         </div>
       </div>
+    </div>
     )
   }
 }

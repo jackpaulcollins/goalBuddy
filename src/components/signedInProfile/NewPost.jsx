@@ -10,23 +10,27 @@ function NewPost({dispatch}){
 
 
     let _content = null;
+    let _user= null;
 
     function handleNewPost(e){
       e.preventDefault();
+      //will need to add logic for getting uid from firebase
       let post = {content: _content.value, likes: 0, id: v4()}
       dispatch(onNewPost(post))
     }
 
+
   return(
     <div className='newPost'>
-      <h1>Create a Post</h1>
+      <h5>Create a Post</h5>
       <form onSubmit={handleNewPost}>
-        <input type='text'
+        <textarea
           id='content'
-          className='newPostInput'
+          className='materialize-textarea'
           placeholder='Whats on your mind?'
-          ref={(input) => {_content = input;}}/>
-        <button type='submit'>Submit</button>
+          ref={(input) => {_content = input;}}>
+        </textarea>
+        <button className="waves-effect waves-light btn">Submit</button>
       </form>
     </div>
   );

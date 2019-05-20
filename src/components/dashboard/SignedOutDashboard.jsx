@@ -9,7 +9,7 @@ function SignedOutDashboard(){
         <div className="card-content white-text homepage-card">
           <h3>Welcome to Goal Buddy!</h3>
           <p>Make Friends & Accomplish Goals With Them</p>
-          <div className="buttons"><Link to="/signin"><button className="waves-effect waves-light btn">Sign In!</button></Link><Link to="/signup"><button className="waves-effect waves-light btn">Sign Up</button></Link></div>
+          <div className="buttons"><Link to="/signin"><button className="waves-effect waves-light btn">Sign In</button></Link><Link to="/signup"><button className="waves-effect waves-light btn">Sign Up</button></Link></div>
         </div>
       </div>
     </div>

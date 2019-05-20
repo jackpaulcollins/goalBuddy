@@ -19,6 +19,7 @@ function App(){
           <NavBar/>
           <Switch>
             <Route exact path='/' component={SignedOutDashboard} />
+            <Route path='/signedin' component={Dashboard} />
             <Route path='/post/:id' component={PostDetail} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />

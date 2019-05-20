@@ -10,6 +10,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { combineReducers } from 'redux';
 import { postReducer } from './reducers/postReducer';
 import { authReducer } from './reducers/authReducer';
+import { goalReducer } from './reducers/goalReducer'
 import { initialState } from './constants/initialState';
 import middlewareLogger from './middleware/middleware-logger';
 import thunkMiddleware from 'redux-thunk';
@@ -18,7 +19,10 @@ import thunkMiddleware from 'redux-thunk';
 
 
 
-const rootReducer = combineReducers({post: postReducer, auth: authReducer});
+const rootReducer = combineReducers({post: postReducer,
+                                     auth: authReducer,
+                                     goal: goalReducer});
+
 const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
 

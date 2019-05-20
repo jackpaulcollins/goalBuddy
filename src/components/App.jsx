@@ -4,10 +4,12 @@ import Body from './signedInProfile/Body';
 import Footer from './layout/Footer';
 import styles from '../scss/styles.scss';
 import {HashRouter, Switch, Route} from 'react-router-dom';
+import SignedOutDashboard from './dashboard/SignedOutDashboard';
 import Dashboard from './dashboard/Dashboard';
 import PostDetail from './feed/PostDetail';
 import SignIn from './auth/SignIn';
 import SignUp from './auth/SignUp';
+import CreateGoal from './goals/CreateGoal'
 
 function App(){
   return (
@@ -16,10 +18,11 @@ function App(){
         <div className="App">
           <NavBar/>
           <Switch>
-            <Route exact path='/' component={Dashboard} />
+            <Route exact path='/' component={SignedOutDashboard} />
             <Route path='/post/:id' component={PostDetail} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
+            <Route path='/create' component={CreateGoal} />
           </Switch>
         </div>
       </HashRouter>

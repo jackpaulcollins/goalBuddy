@@ -8,6 +8,7 @@ class Dashboard extends React.Component{
   render(){
 
     const {goals} = this.props
+    console.log(goals)
 
     return(
       <div className="dashboard container">
@@ -30,4 +31,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect()(Dashboard);
+export default connect(mapStateToProps)(Dashboard);

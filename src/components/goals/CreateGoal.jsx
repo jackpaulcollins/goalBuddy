@@ -3,6 +3,7 @@ import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 import { createGoal } from '../../actions/goalActions';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class CreateGoal extends React.Component {
 
@@ -29,6 +30,8 @@ class CreateGoal extends React.Component {
 
 
   render(){
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to='/signin' />
     return(
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
@@ -55,10 +58,15 @@ class CreateGoal extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
 const mapDispatchToProps = (dispatch) => {
   return {
     createGoal: (goal) => dispatch(createGoal(goal))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateGoal);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateGoal);

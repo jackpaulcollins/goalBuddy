@@ -15,6 +15,7 @@ import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbConfig';
 import { firestoreReducer } from 'redux-firestore';
+import{ firebaseReducer } from 'react-redux-firebase';
 
 
 
@@ -23,27 +24,32 @@ const rootReducer = combineReducers({
   post: postReducer,
   auth: authReducer,
   goal: goalReducer,
-  firestore: firestoreReducer
+  firestore: firestoreReducer,
+  firebase: firebaseReducer
 });
 
 const store = createStore(rootReducer,
   compose(
     applyMiddleware(middlewareLogger, thunkMiddleware.withExtraArgument({getFirebase, getFirestore})),
     reduxFirestore(fbConfig),
-    reactReduxFirebase(fbConfig)
+    reactReduxFirebase(fbConfig, { attachAuthIsReady: true })
   )
 );
 
-const render = (Component) => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById('react-app-root')
-  );
-};
+store.firebaseAuthIsReady.then(() => {
+  const render = (Component) => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+      document.getElementById('react-app-root')
+    );
+  };
+  render(App);
+});
 
-render(App);
+
+
 /*eslint-disable */
 if (module.hot) {
   module.hot.accept('./components/App', () => {

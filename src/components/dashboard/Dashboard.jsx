@@ -4,13 +4,14 @@ import Feed from '../feed/Feed';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { redirect } from 'react-router-dom';
 
 
 class Dashboard extends React.Component{
   render(){
 
-    const {goals} = this.props
-    console.log(goals)
+    const { goals, auth } = this.props
+    if (!auth.uid) return <Redirect to='/signin' />
 
     return(
       <div>
@@ -33,7 +34,8 @@ class Dashboard extends React.Component{
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    goals: state.firestore.ordered.goals
+    goals: state.firestore.ordered.goals,
+    auth: state.firebase.auth
   }
 }
 

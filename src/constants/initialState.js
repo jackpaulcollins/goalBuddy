@@ -2,7 +2,9 @@ export const initialPostState = [
 
 ];
 
-export const initialAuthState = {};
+export const initialAuthState = {
+  authError: null
+};
 
 export const initialGoalState = {
   goals: [

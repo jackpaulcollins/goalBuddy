@@ -3,5 +3,5 @@ import c from './../constants';
 
 
 export const authReducer = (state = initialAuthState, action) => {
-  return state
-}
+  return state;
+};

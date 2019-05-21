@@ -1,5 +1,5 @@
 import React from 'react'
-import GoalDetail from './GoalDetail'
+import GoalSummary from './GoalSummary'
 import { Link } from  'react-router-dom'
 
 const OpenGoals = ({goals}) => {
@@ -8,7 +8,9 @@ const OpenGoals = ({goals}) => {
       <h3>Looking for a Goal Buddy:</h3>
       {goals && goals.map(goal => {
         return (
-            <Link to={'/goal/' + goal.id}><GoalDetail goal={goal} key={goal.id}/></Link>
+            <Link to={'/goal/' + goal.id} key ={ goal.id }>
+              <GoalSummary goal={goal}/>
+            </Link>
         )
       })}
     </div>

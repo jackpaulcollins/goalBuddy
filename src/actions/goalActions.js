@@ -7,13 +7,13 @@ export const createGoal = (goal) => {
     firestore.collection('goals').add({
       ...goal,
       authorFirstName: 'Jack',
-      authorLastNameL: 'Collins',
+      authorLastName: 'Collins',
       authorId: 12345,
       createdAt: new Date()
     }).then(()=> {
-      dispatch({type: types.CREATE_GOAL, goal})
+      dispatch({type: types.CREATE_GOAL, goal});
     }).catch((err) => {
-      dispatch({type: types.CREATE_GOAL_ERROR, err})
-    })
-  }
+      dispatch({type: types.CREATE_GOAL_ERROR, err});
+    });
+  };
 };

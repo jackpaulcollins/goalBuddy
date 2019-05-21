@@ -1,8 +1,8 @@
 export const initialPostState = [
 
-]
+];
 
-export const initialAuthState = {}
+export const initialAuthState = {};
 
 export const initialGoalState = {
   goals: [
@@ -10,4 +10,4 @@ export const initialGoalState = {
     {id: '2', title: 'Gym', goal: 'I want to work out 3 time a week'},
     {id: '3', title: 'Bike commute', goal: 'I want to ride my bike to work at least twice a week'}
   ]
-}
+};

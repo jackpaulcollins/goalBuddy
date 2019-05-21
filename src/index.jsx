@@ -7,7 +7,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { combineReducers, compose } from 'redux';
 import { postReducer } from './reducers/postReducer';
 import { authReducer } from './reducers/authReducer';
-import { goalReducer } from './reducers/goalReducer'
+import { goalReducer } from './reducers/goalReducer';
 import { initialState } from './constants/initialState';
 import middlewareLogger from './middleware/middleware-logger';
 import thunkMiddleware from 'redux-thunk';
@@ -20,19 +20,19 @@ import { firestoreReducer } from 'redux-firestore';
 
 
 const rootReducer = combineReducers({
-                                     post: postReducer,
-                                     auth: authReducer,
-                                     goal: goalReducer,
-                                     firestore: firestoreReducer
-                                   });
+  post: postReducer,
+  auth: authReducer,
+  goal: goalReducer,
+  firestore: firestoreReducer
+});
 
 const store = createStore(rootReducer,
-    compose(
-     applyMiddleware(middlewareLogger, thunkMiddleware.withExtraArgument({getFirebase, getFirestore})),
-     reduxFirestore(fbConfig),
-     reactReduxFirebase(fbConfig)
-   )
+  compose(
+    applyMiddleware(middlewareLogger, thunkMiddleware.withExtraArgument({getFirebase, getFirestore})),
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig)
   )
+);
 
 const render = (Component) => {
   ReactDOM.render(

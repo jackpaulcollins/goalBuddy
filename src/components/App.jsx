@@ -8,8 +8,8 @@ import Dashboard from './dashboard/Dashboard';
 import PostDetail from './feed/PostDetail';
 import SignIn from './auth/SignIn';
 import SignUp from './auth/SignUp';
-import CreateGoal from './goals/CreateGoal'
-import GoalDetail from './goals/GoalDetail'
+import CreateGoal from './goals/CreateGoal';
+import GoalDetail from './goals/GoalDetail';
 
 function App(){
   return (

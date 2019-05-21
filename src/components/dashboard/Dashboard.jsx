@@ -4,7 +4,7 @@ import Feed from '../feed/Feed';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
-import { redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 
 class Dashboard extends React.Component{

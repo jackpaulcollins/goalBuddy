@@ -6,14 +6,13 @@ import { signOut } from '../../actions/authActions'
 
 
 function SignedInLinks(props){
-  const { signOut } = props;
+  const { signOut, profile } = props;
 
   return(
       <ul className="right">
         <li><NavLink to='/create'>New Goal!</NavLink></li>
-        <li><NavLink to='/profile/:uid'>Profile</NavLink></li>
         <li><a onClick={signOut}>Log Out</a></li>
-        <li><NavLink to='/' className="btn btn-floating pink lighten-1">JC</NavLink></li>
+        <li><NavLink to='/' className="btn btn-floating pink lighten-1">{profile.initials}</NavLink></li>
       </ul>
   );
 }

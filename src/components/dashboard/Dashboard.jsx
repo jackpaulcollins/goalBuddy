@@ -10,12 +10,12 @@ import { Redirect } from 'react-router-dom';
 class Dashboard extends React.Component{
   render(){
 
-    const { goals, auth } = this.props
+    const { goals, auth, profile } = this.props
     if (!auth.uid) return <Redirect to='/signin' />
 
     return(
       <div>
-        <h2 className="signedin-header">Welcome Back, Jack!</h2>
+        <h2 className="signedin-header">Welcome, {profile.firstName}!</h2>
         <div className="dashboard container">
           <div className="row">
             <div className="col s12 m3">
@@ -35,7 +35,8 @@ const mapStateToProps = (state) => {
   console.log(state)
   return {
     goals: state.firestore.ordered.goals,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
   }
 }
 

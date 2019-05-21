@@ -26,6 +26,7 @@ class CreateGoal extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createGoal(this.state)
+    this.props.history.push('/');
   }
 
 

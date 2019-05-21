@@ -1,7 +1,9 @@
 import React from 'react';
-import OpenGoals from '../goals/OpenGoals'
+import OpenGoals from '../goals/OpenGoals';
 import Feed from '../feed/Feed';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 
 class Dashboard extends React.Component{
@@ -29,9 +31,15 @@ class Dashboard extends React.Component{
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
-    goals: state.goal.goals
+    goals: state.firestore.ordered.goals
   }
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default compose(
+                        connect(mapStateToProps),
+                        firestoreConnect([
+                          { collection: 'goals' }
+                        ])
+                      )(Dashboard);

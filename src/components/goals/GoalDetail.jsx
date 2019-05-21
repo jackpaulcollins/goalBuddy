@@ -1,10 +1,10 @@
 import React from 'react'
 
-const GoalSummary = ({goal}) => {
+const GoalDetail = ({goal}) => {
   return (
     <div className="card goal-summary">
       <div className="card-content">
-        <span className="card-title ">{goal.title}</span>
+        <span className="card-title ">{ goal.title }</span>
         <p>Posted by The Jack</p>
         <p className="grey-text">3rd September, 2am</p>
       </div>
@@ -12,4 +12,4 @@ const GoalSummary = ({goal}) => {
   )
 }
 
-export default GoalSummary
+export default GoalDetail;

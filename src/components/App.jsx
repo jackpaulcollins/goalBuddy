@@ -9,6 +9,7 @@ import PostDetail from './feed/PostDetail';
 import SignIn from './auth/SignIn';
 import SignUp from './auth/SignUp';
 import CreateGoal from './goals/CreateGoal'
+import GoalDetail from './goals/GoalDetail'
 
 function App(){
   return (
@@ -19,7 +20,7 @@ function App(){
           <Switch>
             <Route exact path='/' component={SignedOutDashboard} />
             <Route path='/signedin' component={Dashboard} />
-            <Route path='/post/:id' component={PostDetail} />
+            <Route path='/goal/:id' component={GoalDetail} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateGoal} />

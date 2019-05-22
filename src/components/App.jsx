@@ -10,6 +10,7 @@ import SignIn from './auth/SignIn';
 import SignUp from './auth/SignUp';
 import CreateGoal from './goals/CreateGoal';
 import GoalDetail from './goals/GoalDetail';
+import Profile from './signedInProfile/Profile'
 
 function App(){
   return (
@@ -25,6 +26,8 @@ function App(){
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateGoal} />
+            <Route path='/profile' component={Profile} />
+
           </Switch>
         </div>
       </HashRouter>

@@ -1,27 +1,22 @@
 import React from 'react';
 import NavBar from '../layout/NavBar';
 import styles from '../../scss/styles.scss';
+import { connect } from 'react-redux';
+import ActiveGoalList from './ActiveGoalList';
 
 function Profile(props){
   const { auth, profile } = props;
-  const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />
+  console.log(props)
   return(
-    <div>
-      <NavBar/>
-      <div>
-        <nav><h1>Jack Collins</h1><span>Goals</span> | <span>About</span> | <span>Photos</span></nav>
-        <div className="profile-card">
-          <h2>Active Goals: </h2>
-          <h2>Past Goals: </h2>
-          <h2>Goal Buddies: </h2>
-        </div>
-        <div className="profile-engage">
-          <button>Message</button>
-          <button>Add Buddy</button>
-          <button>Report</button>
-        </div>
+    <div className="container">
+      <div className="card center">
+        <h2>{profile.firstName} {profile.lastName}</h2>
+        <h3>{auth.email}</h3>  
       </div>
-
+      <div className="active-goals">
+        <h5 className="active-goals-header">{profile.firstName + "'s"} active goals:</h5>
+        <ActiveGoalList/>
+      </div>
     </div>
   );
 }

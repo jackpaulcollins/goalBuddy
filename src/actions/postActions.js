@@ -20,8 +20,16 @@ export const createPost = (post) => {
   };
 };
 
-export const onNewLike = (id) => ({
-  type: types.NEW_LIKE,
-  id: id
-});
-
+export const newLike = (post) => {
+  return (dispatch, getState, {getFirebase, getFirestore})  => {
+    console.log(post.id)
+    const firestore = getFirestore();
+    firestore.collection('posts').doc(post.id).update({
+      likes: (post.likes + 1)
+    }).then(()=> {
+      dispatch({type: types.NEW_LIKE, post});
+    }).catch((err) => {
+      dispatch({ type: types.NEW_LIKE_ERROR, err});
+    });
+  };
+};

@@ -12,9 +12,9 @@ function LiveFeed(props){
       <div>
         {posts && posts.map(post => {
           return (
-              <Link to={'/post/' + post.id} key ={ post.id }>
-                <Post post={post}/>
-              </Link>
+            
+                <Post post={post} key={post.id} id={post.id}/>
+              
           )
         })}
       </div>

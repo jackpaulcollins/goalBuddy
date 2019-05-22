@@ -3,7 +3,6 @@ import NavBar from './layout/Navbar';
 import Footer from './layout/Footer';
 import styles from '../scss/styles.scss';
 import {HashRouter, Switch, Route} from 'react-router-dom';
-import SignedOutDashboard from './dashboard/SignedOutDashboard';
 import Dashboard from './dashboard/Dashboard';
 import PostDetail from './feed/PostDetail';
 import SignIn from './auth/SignIn';

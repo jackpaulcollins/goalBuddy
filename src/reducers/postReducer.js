@@ -2,12 +2,11 @@ import { initialPostState } from '../constants/initialState';
 import c from './../constants';
 
 
-export function postReducer(state = initialPostState, action){
+export const postReducer = (state = initialPostState, action) => {
   switch (action.type){
-  case c.NEW_POST:
-    let newState = state.slice();
-    newState.push(action.post);
-    return newState;
+  case c.CREATE_POST:
+    console.log('created post', action.post)
+    return state;
   case c.NEW_LIKE:
     let idToSearchFor = action.id;
     let newLikeState = state.slice();

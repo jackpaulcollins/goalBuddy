@@ -1,40 +1,61 @@
 import React from 'react';
 import styles from '../../scss/styles.scss';
-import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
-import {connect} from 'react-redux';
-import {onNewPost} from '../../actions/postActions';
+import { connect } from 'react-redux';
+import { createPost } from '../../actions/postActions';
 
 
-function NewPost({dispatch}){
+class NewPost extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      content: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  
+  handleChange(e) {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
 
-    let _content = null;
-    let _user= null;
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log(this.state)
+    this.props.createPost(this.state);
+  }
+  
+  render(){
+    return(
+      <div className='newPost'>
+        <h5>Create a Post</h5>
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="content">content</label>
+          <input
+            id='content'
+            className='materialize-textarea'
+            placeholder='Whats on your mind?'
+            onChange={this.handleChange}>
+          </input>
+          <button className="waves-effect waves-light btn">Submit</button>
+        </form>
+      </div>
+    );
+  }
+}
 
-    function handleNewPost(e){
-      e.preventDefault();
-      //will need to add logic for getting uid from firebase
-      let post = {content: _content.value, likes: 0, id: v4()}
-      dispatch(onNewPost(post))
-    }
-
-
-  return(
-    <div className='newPost'>
-      <h5>Create a Post</h5>
-      <form onSubmit={handleNewPost}>
-        <textarea
-          id='content'
-          className='materialize-textarea'
-          placeholder='Whats on your mind?'
-          ref={(input) => {_content = input;}}>
-        </textarea>
-        <button className="waves-effect waves-light btn">Submit</button>
-      </form>
-    </div>
-  );
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createPost: (post) => dispatch(createPost(post))
+  }
 }
 
 
-export default connect()(NewPost);
+export default connect(mapStateToProps, mapDispatchToProps)(NewPost);

@@ -1,6 +1,5 @@
-export const initialPostState = [
-
-];
+export const initialPostState = {
+};
 
 export const initialAuthState = {
   authError: null

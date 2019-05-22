@@ -2,7 +2,7 @@ import * as types from './../constants/ActionTypes';
 
 export const createPost = (post) => {
   return (dispatch, getState, {getFirebase, getFirestore}) => {
-    console.log('fired')
+    console.log(post)
     const firestore = getFirestore();
     const profile = getState().firebase.profile;
     const authorId = getState().firebase.auth;

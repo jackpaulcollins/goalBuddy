@@ -2,7 +2,9 @@ import React from 'react';
 import NavBar from '../layout/NavBar';
 import styles from '../../scss/styles.scss';
 
-function Profile(){
+function Profile(props){
+  const { auth, profile } = props;
+  const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />
   return(
     <div>
       <NavBar/>
@@ -24,4 +26,13 @@ function Profile(){
   );
 }
 
-export default Profile;
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
+  }
+}
+
+
+export default connect(mapStateToProps)(Profile);

@@ -11,7 +11,7 @@ class Dashboard extends React.Component{
   render(){
 
     const { goals, auth, profile, posts } = this.props
-    if (!auth.uid) return <Redirect to='/signin' />
+    if (!auth.uid) return <Redirect to='/home' />
 
     return(
       <div>

@@ -6,12 +6,14 @@ export const createGoal = (goal) => {
     const firestore = getFirestore();
     const profile = getState().firebase.profile;
     const authorId = getState().firebase.auth;
+    console.log(authorId)
     firestore.collection('goals').add({
       ...goal,
       authorFirstName: profile.firstName,
       authorLastName: profile.lastName,
       authorId: authorId,
-      createdAt: new Date()
+      createdAt: new Date(),
+      buddies: [authorId.uid]
     }).then(()=> {
       dispatch({type: types.CREATE_GOAL, goal});
     }).catch((err) => {

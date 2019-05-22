@@ -19,7 +19,7 @@ class Dashboard extends React.Component{
         <div className="dashboard container">
           <div className="row">
             <div className="col s12 m3">
-              <OpenGoals goals={goals}/>
+              <OpenGoals goals={goals} currentUser={auth.uid}/>
             </div>
           <div className="col s12 m8 offset-m1">
             <Feed posts={posts}/>

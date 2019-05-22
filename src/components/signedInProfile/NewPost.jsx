@@ -33,7 +33,6 @@ class NewPost extends React.Component {
       <div className='newPost'>
         <h5>Create a Post</h5>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="content">content</label>
           <input
             id='content'
             className='materialize-textarea'

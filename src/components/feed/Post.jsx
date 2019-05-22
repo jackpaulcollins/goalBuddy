@@ -3,6 +3,7 @@ import styles from '../../scss/styles.scss';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {onNewLike} from '../../actions/postActions';
+import moment from 'moment';
 
 function Post(props){
   
@@ -12,11 +13,16 @@ function Post(props){
     return(
       <div className="container section post">
         <div className="card post-card">
-          <span className="card-title"><p>{post.firstName}</p></span>
-          <p>{post.content}</p>
+          <span className="card-title"><h5>{post.authorFirstName} {post.authorLastName}</h5></span>
+          <div className="card-content">
+            <p className="black-text">{post.content}</p>
+          </div>
           <div className="card-action">
             <button className="waves-effect waves-light btn">LIKE</button>
             <p>likes: {post.likes}</p>
+          </div>
+          <div>
+                <p className="grey-text">{moment(post.createdAt.toDate()).calendar()}</p>
           </div>
         </div>
       </div>

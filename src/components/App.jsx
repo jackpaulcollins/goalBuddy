@@ -19,6 +19,7 @@ function App(){
           <Switch>
             <Route exact path='/' component={Dashboard} />
             <Route path='/goal/:id' component={GoalDetail} />
+            <Route path='/post/:id' component={PostDetail} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateGoal} />

@@ -14,7 +14,7 @@ function Post(props){
       <div className="container section post">
         <div className="card post-card">
           <span className="card-title"><h5>{post.authorFirstName} {post.authorLastName}</h5></span>
-          <div className="card-content">
+          <div className="card-content center">
             <p className="black-text">{post.content}</p>
           </div>
           <div className="card-action">
@@ -22,7 +22,7 @@ function Post(props){
             <p>likes: {post.likes}</p>
           </div>
           <div>
-                <p className="grey-text">{moment(post.createdAt.toDate()).calendar()}</p>
+                <p className="grey-text center">{moment(post.createdAt.toDate()).calendar()}</p>
           </div>
         </div>
       </div>

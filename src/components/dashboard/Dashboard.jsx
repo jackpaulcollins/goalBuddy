@@ -10,7 +10,7 @@ import { Redirect } from 'react-router-dom';
 class Dashboard extends React.Component{
   render(){
 
-    const { goals, auth, profile } = this.props
+    const { goals, auth, profile, posts } = this.props
     if (!auth.uid) return <Redirect to='/signin' />
 
     return(
@@ -22,7 +22,7 @@ class Dashboard extends React.Component{
               <OpenGoals goals={goals}/>
             </div>
           <div className="col s12 m8 offset-m1">
-            <Feed/>
+            <Feed posts={posts}/>
           </div>
         </div>
       </div>
@@ -36,13 +36,17 @@ const mapStateToProps = (state) => {
   return {
     goals: state.firestore.ordered.goals,
     auth: state.firebase.auth,
-    profile: state.firebase.profile
+    profile: state.firebase.profile,
+    posts: state.firestore.ordered.posts
   }
 }
 
 export default compose(
                         connect(mapStateToProps),
                         firestoreConnect([
-                          { collection: 'goals' }
+                           
+                            {collection: 'goals'},
+                            {collection: 'posts'}
+                          
                         ])
                       )(Dashboard);

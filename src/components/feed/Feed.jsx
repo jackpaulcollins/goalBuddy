@@ -12,17 +12,15 @@ class Feed extends React.Component{
 
 
   render(props){
+    console.log(this.props)
     return(
       <div className="feed">
         <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />
-        <LiveFeed content={this.props.userPosts}/>
+        <LiveFeed posts={this.props.posts}/>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  userPosts: state.post
-});
 
-export default connect(mapStateToProps)(Feed);
+export default(Feed);

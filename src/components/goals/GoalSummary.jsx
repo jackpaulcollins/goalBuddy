@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const ProjectSummary = ({goal}) => {
+const GoalSummary = ({goal}) => {
   return (
     <div className="card goal-summary">
       <div className="card-content">
@@ -13,4 +13,4 @@ const ProjectSummary = ({goal}) => {
   )
 }
 
-export default ProjectSummary
+export default GoalSummary

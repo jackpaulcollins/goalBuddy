@@ -7,14 +7,7 @@ import moment from 'moment';
 
 class Post extends React.Component{
   
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPost: ''
-    };
-    this.handleNewLike = this.handleNewLike.bind(this);
-  }
-  
+
  handleNewLike(post){
     this.props.newLike(post);
   }

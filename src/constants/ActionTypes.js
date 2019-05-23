@@ -11,3 +11,5 @@ export const CREATE_POST = 'CREATE_POST';
 export const CREATE_POST_ERROR = 'CREATE_POST_ERROR';
 export const NEW_LIKE = 'NEW_LIKE';
 export const NEW_LIKE_ERROR = 'NEW_LIKE_ERROR';
+export const PARTNER_ON_GOAL = 'PARTNER_ON_GOAL';
+export const PARTNER_ON_GOAL_ERROR = 'PARTNER_ON_GOAL_ERROR';

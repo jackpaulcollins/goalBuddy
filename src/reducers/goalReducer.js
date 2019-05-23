@@ -10,6 +10,12 @@ export const goalReducer = (state = initialGoalState, action) => {
   case c.CREATE_GOAL_ERROR:
     console.log('create goal error', action.err);
     return state;
+  case c.PARTNER_ON_GOAL:
+    console.log('partner success');
+    return state;
+  case c.PARTNER_ON_GOALL_ERROR:
+    console.log('partner error');
+    return state;
   default:
     return state;
   }

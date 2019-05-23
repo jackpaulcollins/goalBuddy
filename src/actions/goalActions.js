@@ -21,3 +21,19 @@ export const createGoal = (goal) => {
     });
   };
 };
+
+
+export const partnerOnGoal = (goal, goalCreator, newPartner) => {
+  return (dispatch, getState, {getFirebase, getFirestore}) => {
+    console.log('made it', goal)
+    const firestore = getFirestore();
+    firestore.collection('goals').doc(goal).update({
+      buddies: [goalCreator + newPartner]
+    }).then(()=> {
+      dispatch({type: types.PARTNER_ON_GOAL, goal});
+    }).catch((err) => {
+      dispatch({type: types.PARTNER_ON_GOAL_ERROR, err});
+    });
+  };
+};
+

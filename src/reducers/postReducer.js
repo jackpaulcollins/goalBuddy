@@ -8,11 +8,8 @@ export const postReducer = (state = initialPostState, action) => {
     console.log('created post', action.post)
     return state;
   case c.NEW_LIKE:
-    let idToSearchFor = action.id;
-    let newLikeState = state.slice();
-    let foundPost = newLikeState.find(x=>x.id===idToSearchFor);
-    foundPost.likes ++;
-    return newLikeState;
+    console.log('new like')
+    return state;
   default:
     return state;
   }

@@ -3,9 +3,11 @@ import NavBar from '../layout/NavBar';
 import styles from '../../scss/styles.scss';
 import { connect } from 'react-redux';
 import ActiveGoalList from './ActiveGoalList';
+import { Redirect } from 'react-router-dom';
 
 function Profile(props){
   const { auth, profile } = props;
+  if (!auth.uid) return <Redirect to='/home' />
   return(
     <div className="container">
       <div className="card center">

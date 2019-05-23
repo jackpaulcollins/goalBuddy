@@ -11,7 +11,8 @@ export const createPost = (post) => {
       authorFirstName: profile.firstName,
       authorLastName: profile.lastName,
       authorId: authorId,
-      createdAt: new Date()
+      createdAt: new Date(),
+      likedBy: [authorId.uid]
     }).then(()=> {
       dispatch({type: types.CREATE_POST, post});
     }).catch((err) => {
@@ -23,8 +24,13 @@ export const createPost = (post) => {
 export const newLike = (post) => {
   return (dispatch, getState, {getFirebase, getFirestore})  => {
     const firestore = getFirestore();
-    const signedInUser = getState().firebase.auth;
+    const signedInUser = getState().firebase.auth.uid;
     console.log(signedInUser)
+    const test = post.likedBy.find(function(signedInUser){
+      return "true";
+    })
+
+    console.log(test)
     firestore.collection('posts').doc(post.id).update({
       likes: (post.likes + 1),
       likedBy: firestore.FieldValue.arrayUnion(signedInUser)

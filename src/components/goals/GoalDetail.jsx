@@ -12,6 +12,7 @@ function GoalDetail(props){
   
   function handleNewPartnership(goal, goalId, newPartner){
     props.partnerOnGoal(goal, goalId, newPartner)
+    props.history.push('/profile');
   }
   
   if (!auth.uid) return <Redirect to='/signin' />

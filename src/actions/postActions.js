@@ -22,10 +22,12 @@ export const createPost = (post) => {
 
 export const newLike = (post) => {
   return (dispatch, getState, {getFirebase, getFirestore})  => {
-    console.log(post.id)
     const firestore = getFirestore();
+    const signedInUser = getState().firebase.auth;
+    console.log(signedInUser)
     firestore.collection('posts').doc(post.id).update({
-      likes: (post.likes + 1)
+      likes: (post.likes + 1),
+      likedBy: firestore.FieldValue.arrayUnion(signedInUser)
     }).then(()=> {
       dispatch({type: types.NEW_LIKE, post});
     }).catch((err) => {

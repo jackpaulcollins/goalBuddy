@@ -6,22 +6,22 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 
 function ActiveGoalList(props){
-  const { goals, auth, profile, posts } = props
+  const { goals, auth, profile, posts, currentUser } = props
   return(
     <div>
       {goals && goals.map(goal => {
+        if (goal.authorId.uid == currentUser && (goal.buddies.length > 1) || currentUser == goal.buddies[1]){
         return (
             <Link to={'/goal/' + goal.id} key ={ goal.id }>
               <ActiveGoalSummary goal={goal}/>
             </Link>
         )
-      })}
+      }})}
     </div>
   )
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     goals: state.firestore.ordered.goals,
     auth: state.firebase.auth,

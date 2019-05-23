@@ -23,12 +23,13 @@ export const createGoal = (goal) => {
 };
 
 
-export const partnerOnGoal = (goal, goalCreator, newPartner) => {
+export const partnerOnGoal = (goal, goalId, newPartner) => {
   return (dispatch, getState, {getFirebase, getFirestore}) => {
-    console.log('made it', goal)
-    const firestore = getFirestore();
-    firestore.collection('goals').doc(goal).update({
-      buddies: [goalCreator + newPartner]
+      const stringNewPartner = newPartner.toString();
+      const partnerArray = [goal.buddies[0],stringNewPartner]
+      const firestore = getFirestore();
+      firestore.collection('goals').doc(goalId).update({
+        buddies: partnerArray
     }).then(()=> {
       dispatch({type: types.PARTNER_ON_GOAL, goal});
     }).catch((err) => {

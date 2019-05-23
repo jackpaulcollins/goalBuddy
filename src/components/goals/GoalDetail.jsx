@@ -10,13 +10,13 @@ function GoalDetail(props){
   
   const { goal, auth, partnerOnGoal, match} = props;
   
-  function handleNewPartnership(goal, goalCreator, newPartner){
-    props.partnerOnGoal(goal, goalCreator, newPartner)
+  function handleNewPartnership(goal, goalId, newPartner){
+    props.partnerOnGoal(goal, goalId, newPartner)
   }
   
   if (!auth.uid) return <Redirect to='/signin' />
   if (goal){
-    console.log(match.params.id)
+    console.log(goal)
     return (
       <div className="container section goal-details">
         <div className="card">
@@ -27,7 +27,7 @@ function GoalDetail(props){
           <div className="card-action grey lighten-4 grey-text">
             <div>Post by { goal.authorFirstName } { goal.authorLastName }</div>
             <p className="grey-text">{moment(goal.createdAt.toDate()).calendar()}</p>
-            <button className="waves-effect waves-light btn" onClick={()=>{ handleNewPartnership(props.match.params.id, goal.buddies[0], auth.uid); }}>Partner with { goal.authorFirstName }!</button>
+            <button className="waves-effect waves-light btn" onClick={()=>{ handleNewPartnership(goal, match.params.id, auth.uid); }}>Partner with { goal.authorFirstName }!</button>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    partnerOnGoal: (goal, newPartner) => dispatch(partnerOnGoal(goal, newPartner))
+    partnerOnGoal: (goal, goalId, newPartner) => dispatch(partnerOnGoal(goal, goalId, newPartner))
   }
 }
 

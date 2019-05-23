@@ -6,7 +6,6 @@ import ActiveGoalList from './ActiveGoalList';
 
 function Profile(props){
   const { auth, profile } = props;
-  console.log(props)
   return(
     <div className="container">
       <div className="card center">
@@ -15,14 +14,13 @@ function Profile(props){
       </div>
       <div className="active-goals">
         <h5 className="active-goals-header">{profile.firstName + "'s"} active goals:</h5>
-        <ActiveGoalList/>
+        <ActiveGoalList currentUser={auth.uid}/>
       </div>
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile

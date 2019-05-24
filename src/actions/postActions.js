@@ -12,7 +12,7 @@ export const createPost = (post) => {
       authorLastName: profile.lastName,
       authorId: authorId,
       createdAt: new Date(),
-      likedBy: [authorId.uid]
+      likedBy: []
     }).then(()=> {
       dispatch({type: types.CREATE_POST, post});
     }).catch((err) => {

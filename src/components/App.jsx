@@ -11,6 +11,11 @@ import SignUp from './auth/SignUp';
 import CreateGoal from './goals/CreateGoal';
 import GoalDetail from './goals/GoalDetail';
 import Profile from './signedInProfile/Profile'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faHeart)
 
 function App(){
   return (

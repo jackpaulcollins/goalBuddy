@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {newLike} from '../../actions/postActions';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Post extends React.Component{
 
@@ -13,7 +14,7 @@ class Post extends React.Component{
   }
 
   render(){
-    const { post, newLike } = this.props;  
+    const { post, newLike } = this.props;
     return(
       <div className="container section post">
         <div className="card post-card">
@@ -23,7 +24,7 @@ class Post extends React.Component{
           </div>
           <div className="card-action">
             <button className="waves-effect waves-light btn" onClick={()=>{ this.handleNewLike(post); }}>LIKE</button>
-            <p>likes: {post.likes}</p>
+            <p><FontAwesomeIcon icon="heart" /> {post.likes}</p>
           </div>
           <div>
               <p className="grey-text center">{moment(post.createdAt.toDate()).calendar()}</p>

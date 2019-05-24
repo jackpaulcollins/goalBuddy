@@ -5,8 +5,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 
 function ActiveGoalSummary(props){
-  console.log(props.goal.authorId.uid)
-  console.log(props.auth.uid)
+  console.log(props.goal.id)
   return(
     <div className="card">
       <h5>{props.goal.goal}</h5>

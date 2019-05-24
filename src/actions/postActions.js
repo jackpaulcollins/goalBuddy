@@ -30,7 +30,10 @@ export const newLike = (post) => {
     console.log(hasSignedInUserAlreadyLikedPost)
     firestore.collection('posts').doc(post.id).update({
       likes: (hasSignedInUserAlreadyLikedPost == true ? post.likes -1 : post.likes +1),
-      likedBy: firestore.FieldValue.arrayUnion(signedInUser)
+      likedBy: (hasSignedInUserAlreadyLikedPost == true ? post.likedBy.filter(function(item) {
+                                                                              return item !== signedInUser
+                                                                          })
+                                                                         : firestore.FieldValue.arrayUnion(signedInUser))
     }).then(()=> {
       dispatch({type: types.NEW_LIKE, post});
     }).catch((err) => {

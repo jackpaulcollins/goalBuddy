@@ -6,17 +6,14 @@ import {newLike} from '../../actions/postActions';
 import moment from 'moment';
 
 class Post extends React.Component{
-  
+
 
  handleNewLike(post){
     this.props.newLike(post);
   }
 
   render(){
-    const { post, newLike } = this.props;
-    console.log(post)
-    console.log(this.state)
-    
+    const { post, newLike } = this.props;  
     return(
       <div className="container section post">
         <div className="card post-card">

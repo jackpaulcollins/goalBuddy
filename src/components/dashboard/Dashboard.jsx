@@ -32,7 +32,6 @@ class Dashboard extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     goals: state.firestore.ordered.goals,
     auth: state.firebase.auth,
@@ -44,9 +43,9 @@ const mapStateToProps = (state) => {
 export default compose(
                         connect(mapStateToProps),
                         firestoreConnect([
-                           
+
                             {collection: 'goals'},
                             {collection: 'posts'}
-                          
+
                         ])
                       )(Dashboard);

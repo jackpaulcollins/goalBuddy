@@ -6,9 +6,8 @@ const OpenGoals = ({goals, currentUser}) => {
   return (
     <div>
       <h3>Looking for a Goal Buddy:</h3>
-      { 
+      {
         goals && goals.map(goal => {
-        console.log(goal)
         if (goal.authorId.uid != currentUser && currentUser != goal.buddies[1]){
           return (
               <Link to={'/goal/' + goal.id} key ={ goal.id }>

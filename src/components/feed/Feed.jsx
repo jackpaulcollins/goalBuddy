@@ -12,7 +12,6 @@ class Feed extends React.Component{
 
 
   render(props){
-    console.log(this.props)
     return(
       <div className="feed">
         <Route render={()=><NewPost onNewPost={this.handleCreatingNewPost} />} />

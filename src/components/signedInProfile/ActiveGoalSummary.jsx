@@ -10,8 +10,8 @@ function ActiveGoalSummary(props){
   return(
     <div className="card">
       <h5>{props.goal.goal}</h5>
-      <p>Created by {props.goal.authorFirstName}</p>
-      {props.goal.authorId == props.auth.uid ? <p>Partnered With: {props.goal.buddies[1]}</p> : <p>Partnered With: {props.goal.buddies[0]}</p>}
+      <p>Created by {props.goal.authorId.uid == props.auth.uid ? <span>You</span> : <span>{props.goal.authorFirstName}</span>}</p>
+      {props.goal.authorId.uid == props.auth.uid ? <p>Partnered With: {props.goal.buddies[1]}</p> : <p>Partnered With: {props.goal.authorFirstName}</p>}
       <p className="grey-text">{moment(props.goal.createdAt.toDate()).calendar()}</p>
     </div>
     )
@@ -30,4 +30,3 @@ function ActiveGoalSummary(props){
                               {collection: 'users'},
                           ])
                         )(ActiveGoalSummary);
-

@@ -12,9 +12,7 @@ function ActiveGoalList(props){
       {goals && goals.map(goal => {
         if (goal.authorId.uid == currentUser && (goal.buddies.length > 1) || currentUser == goal.buddies[1]){
         return (
-            <Link to={'/goal/' + goal.id} key ={ goal.id }>
-              <ActiveGoalSummary goal={goal}/>
-            </Link>
+              <ActiveGoalSummary goal={goal} key={goal.id}/>
         )
       }})}
     </div>
@@ -36,4 +34,3 @@ export default compose(
                             {collection: 'goals'}
                         ])
                       )(ActiveGoalList);
-

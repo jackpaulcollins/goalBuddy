@@ -14,6 +14,7 @@ import Profile from './signedInProfile/Profile'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import PartneredGoalDetail from './signedInProfile/PartneredGoalDetail'
 
 library.add(faHeart)
 
@@ -32,6 +33,7 @@ function App(){
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateGoal} />
             <Route path='/profile' component={Profile} />
+            <Route path='/activegoal/:id' component={PartneredGoalDetail}/>
 
           </Switch>
         </div>

@@ -11,8 +11,11 @@ function ActiveGoalList(props){
     <div>
       {goals && goals.map(goal => {
         if (goal.authorId.uid == currentUser && (goal.buddies.length > 1) || currentUser == goal.buddies[1]){
+          console.log(goal)
         return (
+            <Link to={'/activegoal/' + goal.id} key ={ goal.id }>
               <ActiveGoalSummary goal={goal} key={goal.id}/>
+            </Link>
         )
       }})}
     </div>

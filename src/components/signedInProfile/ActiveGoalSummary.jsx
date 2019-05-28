@@ -5,16 +5,32 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 
 function ActiveGoalSummary(props){
-  console.log(props.goal.id)
+  const { goal, goals, users, auth } = props;
+
+  const store = users;
+  function findUserName(user, store){
+    return users[user].firstName
+  }
+
+  if(goal && users){
+    const goalBuddyOne = goal.buddies[0]
+    const goalBuddyTwo = goal.buddies[1]
   return(
     <div className="card">
-      <h5>{props.goal.goal}</h5>
-      <p>Created by {props.goal.authorId.uid == props.auth.uid ? <span>You</span> : <span>{props.goal.authorFirstName}</span>}</p>
-      {props.goal.authorId.uid == props.auth.uid ? <p>Partnered With: {props.goal.buddies[1]}</p> : <p>Partnered With: {props.goal.authorFirstName}</p>}
-      <p className="grey-text">{moment(props.goal.createdAt.toDate()).calendar()}</p>
+      <h5>{goal.goal}</h5>
+      <p>Created by {goal.authorId.uid == auth.uid ? <span>You</span> : <span>{goal.authorFirstName}</span>}</p>
+      {goal.authorId.uid == auth.uid ? <p>Partnered With: {findUserName(goalBuddyTwo)}</p> : <p>Partnered With: {findUserName(goalBuddyOne)}</p>}
+      <p className="grey-text">{moment(goal.createdAt.toDate()).calendar()}</p>
     </div>
     )
+  } else {
+    return (
+      <div className="container center">
+        <p>Loading goals...</p>
+      </div>
+    )
   }
+}
 
   const mapStateToProps = (state) => {
     return {

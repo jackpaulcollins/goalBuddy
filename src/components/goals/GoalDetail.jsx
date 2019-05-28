@@ -6,18 +6,23 @@ import { Redirect } from 'react-router-dom';
 import moment from 'moment';
 import { partnerOnGoal } from '../../actions/goalActions';
 
+
+
 function GoalDetail(props){
-  
-  const { goal, auth, partnerOnGoal, match} = props;
-  
+
+  const { goal, auth, users, partnerOnGoal, match} = props;
+
   function handleNewPartnership(goal, goalId, newPartner){
     props.partnerOnGoal(goal, goalId, newPartner)
     props.history.push('/profile');
   }
+
   
+
+
   if (!auth.uid) return <Redirect to='/signin' />
   if (goal){
-    console.log(goal)
+
     return (
       <div className="container section goal-details">
         <div className="card">
@@ -46,6 +51,8 @@ function GoalDetail(props){
 const mapStateToProps = (state, ownProps) => {
   const id = ownProps.match.params.id;
   const goals = state.firestore.data.goals;
+  const users = state.firestore.data.users;
+  console.log(users)
   const goal = goals ? goals[id] : null;
   return {
     goal: goal,
@@ -63,5 +70,8 @@ export default compose(
   connect(mapStateToProps,mapDispatchToProps),
   firestoreConnect([{
     collection: 'goals'
+  },
+  {
+    collection: 'users'
   }])
 )(GoalDetail);

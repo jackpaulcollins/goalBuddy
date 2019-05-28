@@ -25,9 +25,7 @@ export const newLike = (post) => {
   return (dispatch, getState, {getFirebase, getFirestore})  => {
     const firestore = getFirestore();
     const signedInUser = getState().firebase.auth.uid;
-    console.log(signedInUser)
     const hasSignedInUserAlreadyLikedPost = post.likedBy.includes(signedInUser)
-    console.log(hasSignedInUserAlreadyLikedPost)
     firestore.collection('posts').doc(post.id).update({
       likes: (hasSignedInUserAlreadyLikedPost == true ? post.likes -1 : post.likes +1),
       likedBy: (hasSignedInUserAlreadyLikedPost == true ? post.likedBy.filter(function(item) {

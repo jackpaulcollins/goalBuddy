@@ -10,8 +10,8 @@ import styles from '../../scss/styles.scss';
 function PartneredGoalDetail(props){
   const { goal, goals, users, auth } = props;
 
-  const store = users;
-  function findUserName(user, store){
+
+  function findUserName(user){
     return users[user].firstName
   }
 
@@ -21,7 +21,7 @@ function PartneredGoalDetail(props){
     return(
       <div>
         <div className="container center">
-          <h3>Your goal with {auth.uid = goal.authorId.uid ? <p>{findUserName(goalBuddyTwo)}</p> : <p>{findUserName(goalBuddyOne)}</p>}</h3>
+          <h3>Your goal with {auth.uid == goal.authorId.uid ? <p>{findUserName(goalBuddyTwo)}</p> : <p>{findUserName(goalBuddyOne)}</p>}</h3>
         </div>
       </div>
     )

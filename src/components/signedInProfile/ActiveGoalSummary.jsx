@@ -7,12 +7,14 @@ import { compose } from 'redux';
 function ActiveGoalSummary(props){
   const { goal, goals, users, auth } = props;
 
-  const store = users;
-  function findUserName(user, store){
+
+  function findUserName(user){
+    console.log(users)
     return users[user].firstName
   }
 
   if(goal && users){
+    console.log(goal)
     const goalBuddyOne = goal.buddies[0]
     const goalBuddyTwo = goal.buddies[1]
   return(

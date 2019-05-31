@@ -7,6 +7,7 @@ const GoalSummary = ({goal}) => {
       <div className="card-content">
         <span className="card-title ">{goal.title}</span>
         <p>{goal.authorFirstName} {goal.authorLastName}</p>
+        <p>Duration: {goal.duration} days</p>
         <p className="grey-text">{moment(goal.createdAt.toDate()).calendar()}</p>
       </div>
     </div>

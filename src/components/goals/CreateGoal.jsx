@@ -11,7 +11,8 @@ class CreateGoal extends React.Component {
     super(props);
     this.state = {
       title: '',
-      goal: ''
+      goal: '',
+      duration: null
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,6 +46,10 @@ class CreateGoal extends React.Component {
           <div className="input-field">
             <label htmlFor="goal">Goal</label>
             <textarea className="materialize-textarea" type="textarea" id="goal" onChange={this.handleChange}/>
+          </div>
+          <div className="input-field">
+            <label htmlFor="duration">Duration (days)</label>
+            <textarea className="materialize-textarea" type="textarea" id="duration" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
             <button className="waves-effect waves-light btn">Create your goal!</button>

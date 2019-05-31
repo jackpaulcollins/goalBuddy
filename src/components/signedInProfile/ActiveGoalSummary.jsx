@@ -13,12 +13,12 @@ function ActiveGoalSummary(props){
   }
 
   if(goal && users){
-    console.log(goal)
     const goalBuddyOne = goal.buddies[0]
     const goalBuddyTwo = goal.buddies[1]
   return(
     <div className="card">
       <h5>{goal.goal}</h5>
+      <p>{goal.goal.duration}</p>
       <p>Created by {goal.authorId.uid == auth.uid ? <span>You</span> : <span>{goal.authorFirstName}</span>}</p>
       {goal.authorId.uid == auth.uid ? <p>Partnered With: {findUserName(goalBuddyTwo)}</p> : <p>Partnered With: {findUserName(goalBuddyOne)}</p>}
       <p className="grey-text">{moment(goal.createdAt.toDate()).calendar()}</p>

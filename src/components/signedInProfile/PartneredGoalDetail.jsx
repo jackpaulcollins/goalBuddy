@@ -23,13 +23,15 @@ function PartneredGoalDetail(props){
     return(
       <div>
         <div className="container center">
-          <h3>Your goal with {auth.uid == goal.authorId.uid ? <p>{findUserName(goalBuddyTwo)}</p> : <p>{findUserName(goalBuddyOne)}</p>}</h3>
-          <p>Created: {moment(goal.createdAt.toDate()).calendar()}</p>
-          <h5>Title: {goal.title}</h5>
-          <h5>Description: {goal.goal}</h5>
-          <h5>Duration: </h5>
+          <div className="card">
+            <h4>Your goal with {auth.uid == goal.authorId.uid ? <p>{findUserName(goalBuddyTwo)}</p> : <p>{findUserName(goalBuddyOne)}</p>}</h4>
+            <p>Created: {moment(goal.createdAt.toDate()).calendar()}</p>
+            <p>Title: {goal.title}</p>
+            <p>Description: {goal.goal}</p>
+            <p>Duration: </p>
+          </div>
+          <div>
         </div>
-        <div>
           <div className="container center">
             <GoalProgressTracker/>
           </div>

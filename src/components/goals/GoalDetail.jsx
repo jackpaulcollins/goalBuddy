@@ -17,18 +17,19 @@ function GoalDetail(props){
     props.history.push('/profile');
   }
 
-  
+
 
 
   if (!auth.uid) return <Redirect to='/signin' />
   if (goal){
-
+    console.log(goal)
     return (
       <div className="container section goal-details">
         <div className="card">
           <div className="card-content">
             <span className="card-title ">{ goal.title }</span>
             <p>{ goal.goal }</p>
+            <p>Duration: {goal.duration}</p>
           </div>
           <div className="card-action grey lighten-4 grey-text">
             <div>Post by { goal.authorFirstName } { goal.authorLastName }</div>
@@ -52,7 +53,6 @@ const mapStateToProps = (state, ownProps) => {
   const id = ownProps.match.params.id;
   const goals = state.firestore.data.goals;
   const users = state.firestore.data.users;
-  console.log(users)
   const goal = goals ? goals[id] : null;
   return {
     goal: goal,

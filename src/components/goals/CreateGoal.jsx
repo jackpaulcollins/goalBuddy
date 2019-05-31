@@ -30,6 +30,7 @@ class CreateGoal extends React.Component {
   }
 
 
+
   render(){
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' />
@@ -44,11 +45,6 @@ class CreateGoal extends React.Component {
           <div className="input-field">
             <label htmlFor="goal">Goal</label>
             <textarea className="materialize-textarea" type="textarea" id="goal" onChange={this.handleChange}/>
-          </div>
-          <div className="Slider">
-            <p className="range-field">
-              <input type="range" id="test5" min="0" max="100" />
-            </p>
           </div>
           <div className="input-field">
             <button className="waves-effect waves-light btn">Create your goal!</button>

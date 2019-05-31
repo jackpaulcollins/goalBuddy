@@ -9,7 +9,6 @@ function ActiveGoalSummary(props){
 
 
   function findUserName(user){
-    console.log(users)
     return users[user].firstName
   }
 

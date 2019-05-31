@@ -5,6 +5,7 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom';
 import moment from 'moment';
 import styles from '../../scss/styles.scss';
+import GoalProgressTracker from '../goals/GoalProgressTracker';
 
 
 function PartneredGoalDetail(props){
@@ -18,10 +19,20 @@ function PartneredGoalDetail(props){
   if (goal && users){
     const goalBuddyOne = goal.buddies[0]
     const goalBuddyTwo = goal.buddies[1]
+    console.log(goal)
     return(
       <div>
         <div className="container center">
           <h3>Your goal with {auth.uid == goal.authorId.uid ? <p>{findUserName(goalBuddyTwo)}</p> : <p>{findUserName(goalBuddyOne)}</p>}</h3>
+          <p>Created: {moment(goal.createdAt.toDate()).calendar()}</p>
+          <h5>Title: {goal.title}</h5>
+          <h5>Description: {goal.goal}</h5>
+          <h5>Duration: </h5>
+        </div>
+        <div>
+          <div className="container center">
+            <GoalProgressTracker/>
+          </div>
         </div>
       </div>
     )

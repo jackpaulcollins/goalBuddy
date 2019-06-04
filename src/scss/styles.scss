@@ -233,6 +233,10 @@ body{
 }
 
 .cell{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5rem;
   height: 50px;
   width: 50px;
@@ -241,6 +245,13 @@ body{
   padding: 4rem;
   border: 1px solid gray;
 }
+.cell-actions{
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
 
 
 //End Goal tracker styles

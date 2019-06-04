@@ -19,7 +19,7 @@ function PartneredGoalDetail(props){
   if (goal && users){
     const goalBuddyOne = goal.buddies[0]
     const goalBuddyTwo = goal.buddies[1]
-    console.log(goal)
+
     return(
       <div>
         <div className="container center">
@@ -28,12 +28,12 @@ function PartneredGoalDetail(props){
             <p>Created: {moment(goal.createdAt.toDate()).calendar()}</p>
             <p>Title: {goal.title}</p>
             <p>Description: {goal.goal}</p>
-            <p>Duration: </p>
+            <p>Duration: {goal.duration} days</p>
           </div>
           <div>
         </div>
           <div className="container center">
-            <GoalProgressTracker/>
+            <GoalProgressTracker goal={goal}/>
           </div>
         </div>
       </div>

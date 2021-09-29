@@ -19,7 +19,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^2.1.1",
     "firebase": "^6.0.2",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.24.0",
     "nouislider-react": "^3.0.1",

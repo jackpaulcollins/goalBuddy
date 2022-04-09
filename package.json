@@ -21,7 +21,7 @@
     "firebase": "^6.0.2",
     "i": "^0.3.6",
     "materialize-css": "^1.0.0-rc.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nouislider-react": "^3.0.1",
     "npm": "^6.9.0",
     "prop-types": "^15.5.10",
